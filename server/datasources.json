@@ -1,0 +1,45 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "dermatology",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "testDB": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "testDB",
+    "password": "",
+    "name": "testDB",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "storageProvider": {
+    "name": "storageProvider",
+    "connector": "loopback-component-storage",
+    "provider": "azure",
+    "storageAccount": "cs26dce9afb85bdx4fc7x9ef",
+    "storageAccessKey": "Yg4WaUzm87fEJt4IOVUjs3Hdu+y/x61ueWn3lsoZjN+onGWgBnS57K0CaZZO8zaXv5mxEaJTbba6diSALyJBww=="
+  },
+  "myEmail": {
+    "name": "myEmail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "port": 465,
+        "secure": true,
+        "auth": {
+          "user": "dermosskincare@gmail.com",
+          "pass": "dermos123"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+<div class="ui info message">
+  {{#if this.social}}
+    <h4>Histórico Social</h4>
+    <i class="clipboard list icon"></i>
+    <ul class="list">
+      <li>Alimentação: {{this.social.Alimentation}}</li>
+      <li>Consumo de álcool: {{this.social.AlcoholConsumption}}</li>
+      <li>Etnia: {{this.social.Ethnicity}}</li>
+      <li>Exercício físico: {{this.social.PhysicalExercise}}</li>
+      <li>Exposição a animais: {{this.social.ExposureToAnimals}}</li>
+      <li>Drogas recreacionais: {{this.social.RecreationalDrugs}}</li>
+      <li>Hábitos de exposição solar: {{this.social.SunExposure}}</li>
+      <li>Hobbies: {{this.social.Hobbies}}</li>
+      <li>Viagens/estadias recentes: {{this.social.RecentTrips}}</li>
+      <li>Tabagismo: {{this.social.Smoking}}</li>
+      <li>Uso diário de maquilhagem: {{this.social.DailyMakeUpUse}}</li>
+      <li>Uso de medicamentos sistémicos: {{this.social.SystemicDrugsUse}}</li>
+      <li>Ocupação/atividade profissional: {{this.social.ProfessionalActivity}}</li>
+      <li>Outros: {{this.social.Other}}</li>
+    </ul>         
+  {{else if this.role}}
+    <a href="{{this.postsocialHistory}}">Adicionar um Histórico Social</a>
+  {{/if}}
+</div>

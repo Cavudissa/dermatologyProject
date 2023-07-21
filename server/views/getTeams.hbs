@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+
+  
+  
+  
+  
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}   
+     
+         
+         <div class="ui stackable two column grid showHideAdministrative ">
+            <div class="column  five wide fields mainpagediv" >             
+
+            <a class="item ui blue tag label backtomenu"  href="{{backToAdministrative}}"    >
+                    
+                    Voltar ao Menu                           
+            </a>
+
+
+
+            </div>
+            <div class="column ten wide fields"  >
+                 <div class="row cornflowerblueclass" >
+                     <div class="column">Equipas</div>
+                
+                     {{#each this.teams}}
+                     
+                           <div class="ui info message">
+                                <i class="users icon"></i>
+                                <h2 class="header">
+                                  {{TeamName}}
+                                </h2>
+
+                                <ul class="list">
+                                    <li><input class="massive" type="text" id ="{{id}}" placeholder="Introduza o email do membro">
+                                        <button class="ui button" onclick="addMemberToTeam('{{addMemberURL}}','{{id}}')">Adicionar Membro</button>
+                                </li>
+                                    <li><a class="item"  href="{{teamLeaderURL}}"  > {{TeamLeader}}</a> </li>
+                                    <li><a class="item"  href="{{teamNursesURL}}"  > Enfermeiros da Equipa</a> </li>
+                                    <li><a class="item"  href="{{teamDoctorsURL}}"  > Doutores da Equipa</a> </li>
+                                    <li>Id da Equipa : {{id}} </li>
+                              
+                                    
+                                </ul>
+                             <div class="ui  label" >
+                                <i class="delete icon">Eliminar Equipa</i>
+                               </div>
+                         </div>
+                     {{/each}}
+
+                
+                
+                
+                          
+                    </div>
+
+                 </div>
+
+            </div>
+            
+        
+        </div>
+    </body>

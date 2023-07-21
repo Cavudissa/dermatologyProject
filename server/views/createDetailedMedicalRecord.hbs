@@ -1,0 +1,293 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}    
+<div class="ui inverted ">
+
+       <form id="form-create-detailmedicalrecord" class="ui form createdetailedmedicalrecord-class" method="POST" enctype="multipart/form-data" action="{{postURL}}" onsubmit="return submitdetailedmedicalrecord(this)">
+            <h4 class="ui dividing header">Avaliação a uma distância de 20-30cm</h4>
+             <div class="ui stackable two column grid formscreate">
+                <div class="column  ">     
+                    <div class="field">
+                         <label>Dimensão </label>
+                         <select class="ui dropdown" name="dimension" required>        
+                                <option value="">...</option>
+                                <option value="Pontiforme">Pontiforme</option>
+                                <option value="Lenticular">Lenticular</option>
+                                <option value="Numular">Numular</option> 
+                                <option value="Placa">Placa</option>     
+                                <option value="Placar">Placar </option>  
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Morfologia primária</label>
+                    </div>   
+ 
+                    <div class="two fields">            
+                            <div class="field">
+                                <label>Tipo de lesão cutânea elementar primária</label>
+                                <select class="ui dropdown" name="injuryType" required>        
+                                        <option value="">...</option>
+                                        <option value="Mancha/mácula">Mancha/mácula</option>
+                                        <option value="Pápula">Pápula</option>
+                                        <option value="Nódulo">Nódulo</option> 
+                                        <option value="Tumor">Tumor</option>
+                                        <option value="Vesicula">Vesicula</option>
+                                        <option value="Bolha">Bolha</option>
+                                        <option value="Pústula">Pústula</option>     
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Lesão cutânea elementar secundária</label>
+                                <select class="ui dropdown" name="lesion" required>        
+                                        <option value="">...</option>
+                                        <option value="Afta">Afta</option>
+                                        <option value="Atrofia">Atrofia</option>
+                                        <option value="Ceratose">Ceratose</option> 
+                                        <option value="Cicatriz">Cicatriz</option>
+                                        <option value="Comedão">Comedão</option>
+                                        <option value="Crosta">Crosta</option>
+                                        <option value="Erosão">Erosão</option>
+                                        <option value="Escama">Escama</option>
+                                        <option value="Esclerose">Esclerose</option> 
+                                        <option value="Escoriação">Escoriação</option>
+                                        <option value="Fenda">Fenda</option>
+                                        <option value="Liquenificação">Liquenificação</option>
+                                        <option value="Livedo">Livedo</option>
+                                        <option value="Necrose">Necrose</option>
+                                        <option value="Poiquilodermia">Poiquilodermia</option>
+                                        <option value="Telangiectasias">Telangiectasias</option>
+                                        <option value="Ulceração">Ulceração</option>           
+                                </select>
+                            </div>
+
+                    </div> 
+
+                    <div class="two fields">
+                            
+                            <div class="field">
+                                <label>Arranjo</label>
+                                <select class="ui dropdown" name="arrangement" required>        
+                                        <option value="">...</option>
+                                        <option value="Anelar">Esclerose</option> 
+                                        <option value="Circinado">Circinado </option>
+                                        <option value="Concêntrico">Concêntrico </option>
+                                        <option value="Figuração geométrica">Figuração geométrica </option>
+                                        <option value="Herpetiforme">Herpetiforme </option>
+                                        <option value="Linear">Linear </option>
+                                        <option value="Policíclico">Policíclico </option>
+                                        <option value="Reticulado">Reticulado </option>
+                                        <option value="Serpiginoso">Serpiginoso </option> 
+                                        <option value="Zosteriforme/dermatomérica">Zosteriforme/dermatomérica </option>       
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Consistência e superfície / Textura (Avaliada por palpação)</label>
+                                <select class="ui dropdown" name="texture" required>        
+                                        <option value="">...</option>
+                                        <option value="Dura">Dura</option> 
+                                        <option value="Firme">Firme </option>
+                                        <option value="Mole">Mole </option>
+                                        <option value="Escamosa">Escamosa </option>
+                                        <option value="Seca">Seca </option>
+                                        <option value="Húmida">Húmida </option>
+                                        <option value="Móvel">Móvel </option>
+                                        <option value="Infiltrada (preenchida por fluidos)">Infiltrada (preenchida por fluidos) </option>
+                                </select>
+                            </div>
+                        
+                    </div> 
+
+                    <div class="field">
+                        <label>Localização e distribuição</label>
+                    </div>
+
+
+                    <div class="two fields">
+                           
+                        <div class="field">
+                            <label>Tipo da lesão (morfologia primária)</label>
+                            <select class="ui dropdown" name="primaryInjury" required>        
+                                    <option value="">...</option>
+                                    <option value="Lesões elementares">Lesões elementares</option>
+                                    <option value="Lesões elevadas">Lesões elevadas</option>
+                                    <option value="Lesões deprimidas">Lesões deprimidas</option>
+                                    <option value="Lesões achatadas">Lesões achatadas</option>
+                                    <option value="Lesões com mudança na superfície">Lesões com mudança na superfície</option>
+                                    <option value="Lesões com fluido">Lesões com fluido</option>
+                                    <option value="Lesões vasculares">Lesões vasculares</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Avaliação</label>
+                            <input placeholder = "avaliação geral"type="text" name="lymphNodes" required>    
+                        </div>
+                    
+                     </div>
+
+                     <div class="field">
+                             <label>EXAME DE LINFONODOS</label>
+                    </div>
+
+                     <div class="two fields">
+                                                
+                         <div class="field">
+                            <label>Principais cadeias de linfonodos</label>
+                            <input placeholder = "cadeias de linfonodos"type="text" name="evaluation" required>    
+                        </div>
+                        <div class="field">
+                            <label>Cadeias axilares</label>
+                            <input placeholder = "cadeias axilares"type="text" name="axillary" required>    
+                        </div>
+
+                     </div> 
+
+
+                      <div class="two fields">
+                                     
+                                <div class="field">
+                                    <label>Cadeias inguinais</label>
+                                    <input placeholder = "cadeias inguinais"type="text" name="inguinal" required>    
+                                </div>
+                                <div class="field">
+                                    <label>Exames Complementares</label>
+                                    <input placeholder = "exames complementares"type="text" name="exams" required>    
+                                </div>
+                      </div>
+
+                      <div class="two fields">
+
+                             <div class="field">
+                                    <label>Diagnóstico </label>
+                                    <input placeholder = "diagnóstico"type="text" name="diagnosis" required>    
+                              </div>
+                                <div class="field">
+                                    <label>Resultados da análise citopatológica</label>
+                                    <select class="ui dropdown" name="cytoAnalysis" required>        
+                                            <option value="">...</option>
+                                            <option value="Benigno">Benigno</option>
+                                            <option value="Maligno">Maligno</option> 
+                                            <option value="Indeterminado/suspeito">Indeterminado/suspeito</option>
+                                            <option value="Insuficiente/inadequado">Insuficiente/inadequado</option>
+                                    </select>
+                                </div>
+
+                      </div>
+
+ 
+           </div>
+           <div class="column">
+                     <div class="field">
+                         <label>Padrões clínicos dermatológicos</label> 
+                     </div>
+                    <div class="two fields">
+                         <div class="field">
+
+                                        <input type="hidden" value="" name="interimDiagnosis" checked style="display:none">
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Nenhuma" checked> Nenhuma<br>
+                                        </div>  
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Acne juvenil">Acne juvenil<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Dermatite seborreica">Dermatite seborreica<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Eczma">Eczma<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Eritema multiforme">Eritema multiforme<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Eritema nodoso">Eritema nodoso<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Esclerodermia">Esclerodermia<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Lupus eritematoso fixo">Lupus eritematoso fixo<br>
+                                        </div>
+                                        <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Pelagra">Pelagra<br>
+                                        </div>
+                              </div>    
+                
+
+                        <div class="field">                                         
+                                    <div class="field">
+                                            <input type="checkbox" name="interimDiagnosis" value="Pitiríase rosada">Pitiríase rosada<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Pitiríase versicolor">Pitiríase versicolor<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Psoríase">Psoríase<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Rosácea">Rosácea<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Toxidermia fixa">Toxidermia fixa<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Urticária">Urticária<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Vasculite">Vasculite<br>
+                                    </div>
+                                    <div class="field">
+                                        <input type="checkbox" name="interimDiagnosis" value="Outro">Outro<br>
+                                        <input type="hidden" value="" id="image-src" name="imageURL">
+
+                                    </div>
+                        </div>
+                 </div>
+
+                 <div class="two fields">
+                         <div class="field">
+                            <label>Capture Image</label>
+                            <input onclick="submitImage()" id="submit-image-id" class="ui inverted primary button" type="button"name="submit-image" value="startImageCapturing">
+                            <video autoplay></video>
+                            <img style="width:300px;height:300px;display:none" id="image-id" src=" "></img>
+                            <input style="display:none" onclick="cancelImage()" id="cancel-image" class="ui inverted primary button" type="submit" name="cancel-image" value="cancelImage">
+                        </div>
+                                          
+                        <div class="field">
+                            <label>Descrição das Imagens</label>
+                            <input placeholder="descrição" type="text" name="description_upload">
+                        </div>
+                            
+                    </div> 
+                <div class="two fields">
+                       <div class="field">
+                            <form>Select images:
+                                <input type="file" id="upload-image-id" name="img" accept="image/x-png,image/gif,image/jpeg" multiple>
+                            </form>
+                        </div>
+                                            
+                        <div class="field">
+                                    <label>Descrição da Imagem</label>
+                                    <input placeholder = "descrição" type="text" name="description_camera_input" >
+                        </div>
+
+                 </div>
+                                
+           </div> 
+            
+             <div class="field">
+                <input id="submit-detailedmedicalrecord-id" class="ui inverted primary button" form="form-create-detailmedicalrecord" type="submit" name="submit-medicalrecordgroup" value="submit">
+            </div>  <br><br> <br>
+            </div>
+        </form>
+           </div>      
+    
+    </div>
+    </body>
+</html>

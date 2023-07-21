@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    {{> head}}
+
+  </head>
+
+  <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}   
+         <div class="ui stackable two column grid aliceblueclass" >
+                <div class="column  five wide fields div400" >             
+                    <a class="item ui blue tag label backtomenu"  href="{{backToAdministrative}}"  >
+                            
+                            Voltar ao Menu                           
+                    </a>
+                   </div>
+                    <div class="column">
+                
+                       <div class="ui info message">
+                                <i class="users icon"></i>
+                                <h2 class="header">
+                                  {{StaffMemberRole}}
+                                </h2>
+                                <ul class="list"> 
+                                    <li>Nome : {{Name}} {{LastName}}</li>
+                                    <li>Nacionalidade : {{Nationality}}</li>
+                                    <li>Genero : {{Gender}}</li>    
+                                    <li>Endereço : {{Address}}</li> 
+                                    <li>Tipo de identificação : {{IDType}}</li>  
+                                    <li>identificação : {{IDNumber}}</li>  
+                                    <li>Email : {{Email}}</li>  
+                          
+                                         
+                                </ul>
+                         </div>
+                
+                            
+                    </div>
+
+    </div>
+            
+        <div>   {{> footer home="active"}} </div>
+        </div>
+    </body>

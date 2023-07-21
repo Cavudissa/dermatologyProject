@@ -1,0 +1,16 @@
+{{#each this.medicalRecordGroups}}    
+    <div class="ui info message">
+        <i class="clone icon"></i>
+        <h2 class="header">
+            Patologia: {{Pathology}}
+        </h2>
+        <ul class="list">
+            <li> Descrição: {{Description}}</li>
+            <a href="medrecordsgroup/{{id}}?accessToken={{../this.Token}}">Detalhes</a>   
+        </ul>
+    </div>
+{{/each}}
+{{#if this.role}}
+    <a href="{{this.postmedRecordsGroup}}">Adicionar um novo grupo de fichas</a>
+{{/if}}
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      <div id="header-patient-id">{{>menu home="active"}}</div>   
+      <div id="short-header-patient-id" style="display:none;">{{>shortLoggedMenu home="active"}}</div>
+     
+     
+         <div class="ui stackable two column grid aliceblue">
+                    <div id="menu-menu-option-id" class="column  five wide fields">
+                             {{> shortMenuPatient}} 
+                   </div>
+                    <div class="column">
+
+                        {{!-- {{This DIV holds the patient notications }} --}}
+                        <div id="notification-menu-option-id" class="row patient-menu-option-class showHideAdministrative2" style=" display: none;">
+                                {{> notification}}   
+                        </div> 
+
+                       {{!-- {{This DIV holdsthe information of the patient }} --}}
+                        <div id="patient-personal-menu-option-id" class="row patient-menu-option-class cornflowerblueclass" style=" display: block;">
+                                {{> patientPersonalInfo }}   
+                        </div>
+                        <div id="sexual-history-menu-option-id" class="row patient-menu-option-class showHideAdministrative2" style=" display: none;" >
+                                {{> sexualHistory}}   
+                        </div>
+                        <div id="social-history-menu-option-id" class="row patient-menu-option-class showHideAdministrative2" style=" display: none;" >
+                                {{> socialHistory}}   
+                        </div> 
+                        <div id="family-history-menu-option-id" class="row patient-menu-option-class showHideAdministrative2" style=" display: none;" >
+                                {{> familyHistory}}   
+                        </div>
+                        <div id="medical-history-menu-option-id" class="row patient-menu-option-class showHideAdministrative2"style=" display: none;" >
+                             {{> medicalHistory}}   
+                        </div> 
+                        <div id="change-password-menu-option-id" class="row patient-menu-option-class showHideAdministrative2"style=" display: none;" >
+                             {{> changePassword}}   
+                        </div> 
+                        <div id="staff-info-menu-option-id" class="row patient-menu-option-class showHideAdministrative2"style=" display: none;" >
+                             {{> changePassword}}   
+                        </div> 
+
+                    </div>
+
+    </div>
+        </div>
+    </body>
+</html>

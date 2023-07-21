@@ -1,0 +1,74 @@
+{
+  "name": "Team",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Leader": {
+      "type": "Doctor",
+      "required": true
+    },
+    "Status": {
+      "type": "boolean",
+      "default": true
+    },
+    "TeamName": {
+      "type": "string",
+      "required": false
+    },
+    "Doctors": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "Nurses": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "kek": {
+      "type": "string",
+      "required": true
+    },
+    "dek": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "patients": {
+      "type": "hasMany",
+      "model": "Patient",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

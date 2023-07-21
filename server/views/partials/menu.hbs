@@ -1,0 +1,25 @@
+<style>
+
+
+</style>
+
+<div class="ui pointing menu ">
+    <a class="item ui violet basic button" href="/home"><img class="ui mini image" 
+    src="http://www.shcollege.ac.in/Images/DepartmentMenus/Home.png" ></a>
+    <a class="item ui purple basic button" href="#"><img class="ui mini image" 
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi6I-WTdNu6325eu7Fx9LXNylQ4k62jjlhsJLBLvZF-TRa5tdK"
+     >About the App</a>
+    <a class = "item  ui purple basic button" href="https://www.instagram.com/?hl=pt"><i class="phone icon"></i>Contact Us</a>
+    <a class="item  ui violet basic button " href="https://www.facebook.com/"><i class="plus icon"> </i>About Us</a>
+    <a class="item  ui primary basic button " href="/administrative-register">Registrar Administrativo</a>
+    {{#if particular}}
+        <a class="item  right ui primary basic button " href="{{logout}}">Terminar Sessão</a>
+    {{else if administrative}}
+        <a class="item  right ui primary basic button " href="{{logout}}">Terminar Sessão</a>
+    {{else }}
+        <a class="item  ui primary basic button " href="/login/administrative">Login Administrative </a>
+        <a class="item right ui positive basic button " href="/login/particular">Login Particular</a>
+    {{/if}}
+</div>
+
+

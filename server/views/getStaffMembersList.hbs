@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    {{> head}}
+
+  </head>
+<body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}    
+     
+         
+         <div class="ui stackable two column grid aliceblueclass">
+               <div class="column  five wide fields div400" >             
+                    <a class="item ui blue tag label backtomenu"  href="{{backToAdministrative}}"   >
+                            
+                            Voltar ao Menu                           
+                    </a>
+                   </div>
+                    <div class="column">
+                  {{#if this.isNotArray}}
+                        <div class="column"><h2>Não existem {{this.Staff}} </h2></div>
+                  {{/if}}      
+                  {{#each this.doctorsObjs}}
+                       <div class="ui info message">
+                                <i class="users icon"></i>
+                                <h2 class="header">
+                                 {{Role}}
+                                </h2>
+                                <ul class="list"> 
+                                    <li>{{Name}} {{LastName}}</li>
+                                    <li> {{Email}} </li>   
+                                    <li > 
+                                        <i  onclick="showDetailedInfo()" class="plus icon " style="color:lightgray;" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='lightgray'">     </i>
+                                         <ul class="list" style="display:none" id="show-detailed-info-id" >
+                                          <i  onclick="closeDetailedInfo()" class="angle up icon " style="color:lightgray;" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='lightgray'">     </i>
+                               
+                                                <li>Genero: {{Gender}} </li>
+                                                <li>Tipo de identificação: {{IDType}} </li>      
+                                                <li> Nacionalidade: {{Nationality}} </li> 
+                                                <li> Endereço: {{Address}} </li>     
+                                                <li> Codigo Postal: {{PostalCode}} </li>     
+
+                                         </ul>            
+                                    </li>
+
+                                </ul>
+                         </div>
+                     {{/each}}
+                            
+                    </div>
+
+    </div>
+            
+    
+        </div>
+    </body>

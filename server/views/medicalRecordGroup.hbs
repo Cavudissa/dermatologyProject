@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>    
+    
+    <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}   
+         <div class="ui stackable two column grid aliceblueclass">
+            <div class="column  five wide fields" style="height:500px;">
+              <a class="item ui blue tag label backtomenu"  href="{{this.backTo}}">
+                      
+                      Voltar ao Menu Anterior                           
+              </a>
+            </div>
+            <div class="column">
+                           <div class="ui info message">
+                <i class="clipboard list icon"></i>
+                <h2 class="header">{{this.medRecordsGroup.Pathology}} </h2>
+                <ul class="list">
+                  <li><strong>Descrição</strong> - {{this.medRecordsGroup.Description}}</li>
+                  <li><strong>Queixa principal</strong> -{{this.medRecordsGroup.MainComplaint}}</li>
+                  <li><strong>Quando começou</strong> - {{this.medRecordsGroup.StartedWhen}}</li>
+                  <li><strong>Parte do corpo onde começou</strong> -{{this.medRecordsGroup.StartedLocation}}</li>
+                  <li><strong>Tipo </strong>- Impressão local {{this.medRecordsGroup.Type}}</li>
+                  <li> <strong>Intensidade</strong>- Impressão local {{this.medRecordsGroup.Intensity}}</li>
+                  <li> <strong>Constância</strong>- Impressão local {{this.medRecordsGroup.Constancy}}</li>
+                  <li> <strong>Dispersão</strong>- Impressão local {{this.medRecordsGroup.Dispersal}}</li>
+                  <li><strong>Como evoluíram as lesões individuais </strong>- Alterações {{this.medRecordsGroup.InjuryChanges}}</li>
+                  <li><strong>Como evoluíram as lesões individuais</strong> - Evolução {{this.medRecordsGroup.InjuryEvolution}}</li>
+                  <li><strong>Fatores de provocação </strong>-{{this.medRecordsGroup.Trigger}}</li>
+                  <li> <strong>Tratamentos Prévio</strong>-{{this.medRecordsGroup.PreviousTreatment}}</li>
+                  <li> <strong>Outros</strong>-{{this.medRecordsGroup.Others}}</li>
+                  <a class="ui right pointing teal  label item " href="{{this.medRecordsGroup.id}}/medrecords?accessToken={{this.Token}}">Ver todos os exames gerais</a> <br>
+                  <br><strong></strong>
+                  <a class="ui right pointing teal  label item " href="{{this.medRecordsGroup.id}}/detailedmedrecords?accessToken={{this.Token}}">Ver todas as avaliações</a> 
+                </ul>         
+              </div>    
+            </div>          
+        </div>
+       
+        </div>
+    </body>
+</html>  
+
+  

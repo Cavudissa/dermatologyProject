@@ -1,0 +1,31 @@
+<div class="ui segment" id="sm-main-div-id">
+      <div class="ui relaxed divided list">
+
+       <div class="item">  
+            <a class="ui  right pointing green label  item  " id="sm-patient-wellcome" ><i class="user icon"></i>Bem vindo, {{this.Staff.profission}} {{this.Staff.LastName}}  </a>
+        </div>  </br>
+
+           <div>  <a class="ui right pointing blue label item" onclick="teamShow()">  
+                   <i class="users icon"></i>Minhas Equipas
+            </a></div>  </br>    
+
+      
+        <div> <a class="ui  right pointing green blue label item " onclick="notifShow()">  
+                   <i class="bell icon"></i>Notificações
+                    <div class="floating ui red label"> {{length}} </div>
+
+            </a>
+            </div>  </br>    
+ 
+
+       <div onclick="showdHideStaff()" >  
+           <a class="ui  right pointing blue label sm-options"><i class="info icon"></i>Outras Informações</a>
+       </div> 
+        <div style="display:none;" id="staff-other-id">
+                <a class="ui right pointing blue basic  label item " id="sm-staff-options1" onclick="personalInfoShow()"><i class="plus icon"></i>Informações Pessoais</a> 
+        </br>  <a class="ui right pointing blue basic label item " id="sm-staff-options2" onclick="staffChangePasswordShow()" ><i class="user icon"></i>Mudar Password</a>
+        
+        </div>    
+    </div>                 
+ </div>
+

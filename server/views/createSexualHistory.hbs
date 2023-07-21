@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}} 
+    
+
+
+<div class="ui inverted ">
+      <form class="ui form  createSexualHistory-class"  method="POST" onsubmit="return " action="{{postSexualHistory}}">
+             <h4 class="ui dividing header">História Sexual</h4>
+             
+             <div class="field">
+                          <div class="field violet">
+                                  <input type="text" name="stdHistory" placeholder="Historial de DST" required >
+                          </div>
+                    </div>
+            </div>
+            <div class="field">
+                <label>Sexualmente ativo</label>
+                <select class="ui dropdown" name="active" required>        
+                        <option value="">...</option>
+                        <option value="Parceiros vários">Parceiros vários</option>
+                        <option value="Proteção contra DST">Proteção contra DST</option>
+                        <option value="Prevenção de gravidez">Prevenção de gravidez</option>      
+                </select>
+            </div>
+             <div class="field">
+                   <input id="submit-sexuallhistory-id"class="ui inverted primary button" type="submit" name="submit-administrative" value="submit">
+               </div>  <br><br> <br>
+        </form>
+           </div>      
+      
+    </div>
+    </body>

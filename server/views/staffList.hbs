@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    {{> head}}
+
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+     {{> shortLoggedMenu home="active"}} 
+         
+         <div class="ui stackable two column grid aliceblue" >
+               <div class="column  five wide fields div400">             
+                    <a class="item ui blue tag label backtomenu"  href="{{backToMenu}}"   >
+                            
+                            Voltar ao Menu                           
+                    </a>
+                   </div>
+                   <input type="hidden" id="token" value="{{token}}">
+                   <input type="hidden" id="revokeUrl" value="{{revokeUrl}}">
+                    <div class="column">
+                  {{#each this.Teams}}
+                       <div class="ui info message">
+                                <i class="users icon"></i>
+                                <h2 class="header">
+                                  {{TeamName}}
+                                </h2>
+                        {{#each this.doctors}}
+                            <div class="ui info message">
+                                    <ul class="list"> 
+                                        <li>Doutor(a) {{Name}} {{LastName}} </li>      
+                                    </ul>
+                            </div>
+                        {{/each}}
+                        {{#each this.nurses}}
+                            <div class="ui info message">
+                                    <ul class="list"> 
+                                        <li>Enfermeiro(a) {{Name}} {{LastName}} </li>     
+                                    </ul>
+                            </div>
+                        {{/each}}
+                        {{#if ../this.role}}
+                            <a onclick="revokePermission('{{id}}')" class="ui right pointing blue basic label item " id="sm-staff-options2" ><i class="user icon"></i>Revogar Permissão</a>         
+                        {{/if}}
+
+                        </div>
+                    {{/each}}             
+                </div>
+    </div> 
+        </div>
+    </body>
+</html>

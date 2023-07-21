@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+
+  </head>
+
+     <body >
+    <div class="ui segment">
+      <div id="header-id">{{>menu home="active"}}</div>   
+      <div id="short-header-id">{{>shortLoggedMenu home="active"}}</div>
+     
+         
+         <div class="ui stackable two column grid showHideAdministrative ">
+                    <div class="column  five wide fields">
+                             {{> shortMenuAdministrative}} 
+                   </div>
+                    <div class="column">
+
+                        {{!-- {{This DIV holds a form for patients sign up }} --}}
+                        <div id="create-patient-menu-option-id" class="row admnistrative-menu-option-class showHideAdministrative2" style="display:none">
+                                {{> createPatient }}   
+                        </div> 
+
+                         {{!-- {{This DIV holds a form for a staff member sign up }} --}}
+                        <div id="create-staff-member-menu-option-id" class="row admnistrative-menu-option-class showHideAdministrative2" style="display:none">
+                                {{> createStaffMember}}   
+                        </div> 
+
+                         <div id="create-team-menu-option-id" class="row admnistrative-menu-option-class showHideAdministrative2" style="display:none">
+                                {{> createTeam}}   
+                        </div> 
+
+                         <div id="add-people-menu-option-id" class="row admnistrative-menu-option-class"  style="display:none">
+                                {{> addPeople}}   
+                        </div> 
+                            
+                        {{!-- {{This DIV holdsthe information of the hospital }} --}}
+                        <div id="get-info-menu-option-id" class="row admnistrative-menu-option-class" style="display:block">
+                                {{> administrativeInfo}}   
+                        </div> 
+                            
+                            
+
+                    </div>
+
+    </div>
+            
+        <div id="footer-id">   {{> footer home="active"}} </div>
+        <div id="short-footer-id" >   <a class="ui red tag label">Page footer</a></div>
+        </div>
+    </body>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+
+  </head>
+     <body >
+    <div class="ui segment" >
+      {{> menu home="active"}}   
+              <br> <br><br>
+      <div class="ui two column grid container" >
+        <div class="column middle aligned" style="height: 350px;">
+
+          <form class="ui form reset-class" method="POST" onsubmit="return resetPassword()" action="{{postURL}}">
+                        <div class="field">
+                          <input type="text" name="email" placeholder="email" required>
+                        </div>
+                        <div class="field">
+                          <input type="password" name="password" placeholder="password" required>
+                        </div>
+                        <div class="field">
+                          <input type="password" name="repeat_password" placeholder="repeat password" required>
+                        </div>
+
+                        <button id="submit-reset-password-id" class="item  ui primary basic button" type="submit">Submit</button>
+        </form>
+          </div>
+      </div>
+      <h4 class="ui horizontal divider header">
+      </h4>
+    </div>
+    </body>

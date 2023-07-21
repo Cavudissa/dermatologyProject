@@ -1,0 +1,27 @@
+<div class="ui segment" id="sm-main-div-id">
+      <div class="ui relaxed divided list">
+
+            <div class="item" onclick="showdHideStaffHist()">  
+            <a id="sm-staff-options8" class="ui  blue tag label item sm-options"><i class="file alternate outline icon"></i>Consultar Histórico</a>
+            </div> 
+             <div id="staff-hist-id" class="patient-show-hide">
+                       <a class="ui teal ribbon  right label item "  id="sm-staff-options1" onclick="showSexualHistory()()"><i class="users icon"> </i>Histórico Sexual</a> 
+                </br>  <a class="ui teal ribbon  label item " id="sm-staff-options2" onclick="showMedicalHistory()" ><i class="user md icon"></i>Histórico Médico</a>
+                </br>  <a class="ui teal ribbon  label item " id="sm-staff-options3" onclick="showFamilyHistory()"><i class="users icon"></i>Histórico Familiar</a>
+                 </br>  <a class="ui teal ribbon  label item " id="sm-staff-options4"  onclick="showSocialHistory()"><i class="users icon"></i>Histórico Social</a>
+             </div></br>    
+   
+      
+       <div onclick="hideOthers('staff-hist-id')" > 
+            <a class="ui right pointing blue label item " id="sm-staff-options6"  href="{{this.medrecordsgroup}}"><i class="open folder icon"></i>Grupos de Ficha</a>
+             </div> </br>  
+      
+  
+             <div onclick="hideOthers('staff-hist-id')" >
+                       <a class="ui right pointing blue  label item " id="sm-staff-options7" onclick="showPersonalInfo()"><i class="plus icon"></i>Informações Pessoais</a> 
+             
+             </div>    
+      
+        
+    </div>                 
+ </div>

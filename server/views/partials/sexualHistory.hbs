@@ -1,0 +1,12 @@
+<div class="ui info message">
+  {{#if this.sexual}}
+    <h4>Histórico Sexual</h4>
+    <i class="clipboard list icon"></i>
+    <ul class="list">
+      <li>Sexualmente Ativo: {{this.sexual.SexuallyActive}}</li>
+      <li>Historial de DST: {{this.sexual.STDHistory}}</li>
+    </ul>
+  {{else if this.role}}
+    <a href="{{this.postsexualHistory}}">Adicionar um Histórico Sexual</a>
+  {{/if}}   
+</div>

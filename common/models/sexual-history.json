@@ -1,0 +1,22 @@
+{
+  "name": "SexualHistory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "SexuallyActive": {
+      "type": "string",
+      "required": true
+    },
+    "STDHistory": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

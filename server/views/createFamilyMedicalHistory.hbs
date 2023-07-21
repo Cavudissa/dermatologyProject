@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}   
+    
+
+
+<div class="ui inverted ">
+
+      <form class="ui form  createfamilymedicalhistory-class"  method="POST" action="{{postFamilyHistory}}">
+             <h4 class="ui dividing header">Historial Médico-Familiar</h4>
+                <div class="field">
+                    <label>Cutâneas </label>
+                        <select class="ui dropdown" name="cutaneous">        
+                                <option value="">...</option>
+                                 <optgroup label="Cancro da pele">
+                                    <option value="CBC">CBC</option>
+                                    <option value="CEC">CEC</option>
+                                    <option value="Melanoma">Melanoma</option>
+                                </optgroup>
+                                <option value="Genodermatose">Genodermatose </option>
+                                <option value="Psoríase ">Psoríase </option>
+                                <option value="Esclerose Tuberosa  ">Esclerose Tuberosa (síndrome de Bourneville-Pringle ou Epilóia)</option> 
+                                <option value="Xantomas">oXantomas </option>
+                                <option value="Outras ">Outras </option>      
+                        </select>
+            </div>           
+           <div class="field">
+                <div class="field">
+                    <input type="checkbox" name="atopias" value="Sim">Atopias<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="baldness" value="Sim">Calvície <br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="cancer" value="Sim">Cancro <br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="others" value="Sim">Outras <br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="diabetes" value="Sim">Diabetes <br>
+                </div>
+                 <div class="field">
+                    <input type="checkbox" name="skinDiseases" value="Sim">Patologias da Pele <br>
+                </div>            
+            </div>
+        
+              <div class="field">
+                   <input id="submit-familymedicalhistory-id"class="ui inverted primary button" type="submit" name="submit-administrative" value="submit">
+               </div>  <br><br> <br>
+                
+        </form>
+           </div>      
+      
+    </div>
+    </body>
+</html>

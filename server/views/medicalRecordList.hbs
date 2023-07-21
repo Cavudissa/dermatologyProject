@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{> head}}
+    </head>    
+    <body bgcolor="#E6E6FA">
+        <div class="ui segment">
+       {{> shortLoggedMenu home="active"}}  
+            <div class="ui stackable two column grid aliceblueclass" >
+                <div class="column  five wide fields div400" >
+                   <a class="item ui blue tag label backtomenu"  href="{{this.backTo}}"     >
+                      Voltar ao Menu Anterior                           
+                    </a>
+                </div>
+                <div class="column">
+                    {{#each this.medicalRecords}}
+                        <div class="ui info message">
+                            <i class="clone icon"></i>
+                            <h2 class="header"> {{Date}}</h2>
+                            <a href="medrecords/{{id}}?accessToken={{../this.Token}}">Ver os detalhes...</a>
+                        </div>                  
+                    {{/each}}
+                    {{#if this.role}}
+                    <a href="{{this.medRecordsForm}}">Criar um Novo...</a>
+                    {{/if}}
+                </div>
+            </div>
+           
+        </div>
+    </body>
+</html>  
+
+  

@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+  /* Make the image fully responsive */
+ 
+  #demo{
+       width: 210px;
+      height: 80px;
+  }
+   #demo2{
+       width: 210px;
+      height: 80px;
+  }
+  .scrollCompare{
+       width: 400px;
+       height: 400px;
+       overflow: auto;
+
+  }
+  </style>
+  {{> head}}
+</head>
+<body>
+<div class="wrapper">
+{{> shortLoggedMenu home="active"}}
+  <div class="column  five wide fields div600">
+            <a class="item ui blue tag label backtomenu"  href="{{this.backTo}}" >
+                    Voltar ao Menu Anterior                           
+            </a> <br><br><br>
+    </div>    
+<div class="ui stackable two column grid fitInCenter2"  >
+  
+  <div class="column eight wide fields ">
+         <div class="field scrollCompare" id="pivoId" style="display:none">
+             <img class="ui large rounded image" src=""  id="imgPivo">               
+         </div>
+    </div>
+    
+      <div class="column  eight wide fields" id="comparatorId" style="display:none">
+          <div class="field scrollCompare">
+             <img class="ui large rounded image" src="" id="imgComparator"  >               
+         </div>
+     </div>
+
+</div>
+  
+<div class="ui stackable two column grid fitInCenter" >
+    <div class="column ">
+         <div id="demo" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="ui large rounded image" id='willBeChangedImg1Id' src="https://static.wixstatic.com/media/6f9881_0eab7ff1b9a34880bb343007c4ecd5dd~mv2.gif" >
+                        <div class="carousel-caption">
+                            
+                        </div>   
+                    </div>
+                    {{#each record1}}
+                        <div class="carousel-item">
+                        <img class="ui large rounded image" id="{{name}}" src="{{src}}">
+                        <div class="carousel-caption">
+                            <div class="ui buttons compareBase">
+                                <button class="ui button" onclick="moveToBase('{{name}}')">Base</button>
+                                <div class="or" data-text="ou"></div>
+                                <button class="ui positive button" onclick="moveToComparator('{{name}}')">Comparar</button>
+                            </div>
+                        </div>   
+                    </div>
+                    {{/each}}
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                </div>
+
+    </div>
+
+    <div class="column ">
+   
+          <div id="demo2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active imgrec2">
+                        <img class="ui large rounded image" id='willBeChangedImg1Id' src="https://static.wixstatic.com/media/6f9881_0eab7ff1b9a34880bb343007c4ecd5dd~mv2.gif" >
+                        <div class="carousel-caption">
+                            
+                        </div>   
+                </div>
+                {{#each this.record2}}
+                    <div class="carousel-item imgrec2">
+                        <img class="ui large rounded image " id="{{name}}" src="{{src}}">
+                        <div class="carousel-caption">
+                            <div class="ui buttons">
+                                <button class="ui button" onclick="moveToBase('{{name}}')">Base</button>
+                                <div class="or" data-text="ou"></div>
+                                <button class="ui positive button" onclick="moveToComparator('{{name}}')">Comparar</button>
+                            </div>
+                        </div>   
+                    </div>
+                {{/each}}
+            </div>
+            <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo2" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+            </div>
+
+    </div><br><br> 
+
+</div>
+    
+</div>
+    
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+{
+  "name": "MedicalRecord",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "SkinType": {
+      "type": "string",
+      "required": true
+    },
+    "TeamNotes": {
+      "type": [
+        "KeyValuePair"
+      ],
+      "required": false
+    },
+    "Date": {
+      "type": "string",
+      "required": true
+    },
+    "Phototype": {
+      "type": "string",
+      "required": true
+    },
+    "Photoaging": {
+      "type": "string",
+      "required": true
+    },
+    "CurrentTanning": {
+      "type": "string",
+      "required": true
+    },
+    "Pallor": {
+      "type": "string",
+      "required": true
+    },
+    "Integrity": {
+      "type": "string",
+      "required": true
+    },
+    "Humidity": {
+      "type": "string",
+      "required": true
+    },
+    "Texture": {
+      "type": "string",
+      "required": true
+    },
+    "Thickness": {
+      "type": "string",
+      "required": true
+    },
+    "Temperature": {
+      "type": "string",
+      "required": true
+    },
+    "Elasticity": {
+      "type": "string",
+      "required": true
+    },
+    "Mobility": {
+      "type": "string",
+      "required": true
+    },
+    "Turgor": {
+      "type": "string",
+      "required": true
+    },
+    "Sensitivity": {
+      "type": "string",
+      "required": true
+    },
+    "SunBurn": {
+      "type": "string",
+      "required": true
+    },
+    "AffectedArea": {
+      "type": "string",
+      "required": true
+    },
+    "Quantity": {
+      "type": "string",
+      "required": true
+    },
+    "Comparison": {
+      "type": "string",
+      "required": true
+    },
+    "Disposition": {
+      "type": "string",
+      "required": true
+    },
+    "Distribution": {
+      "type": "string",
+      "required": true
+    },
+    "Pattern": {
+      "type": "string",
+      "required": true
+    },
+    "ColorChange": {
+      "type": "string",
+      "required": true
+    },
+    "SkinLayers": {
+      "type": "string",
+      "required": true
+    },
+    "SkinColor": {
+      "type": "string",
+      "required": true
+    },
+    "OtherSignals": {
+      "type": "string",
+      "required": true
+    },
+    "Hairs": {
+      "type": "string",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Adenomegalia": {
+      "type": "string",
+      "required": true
+    },
+    "Linfedema": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "team": {
+      "type": "hasOne",
+      "model": "Team",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "medicalRecordGroup": {
+      "type": "belongsTo",
+      "model": "MedicalRecordGroup",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Patient": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Doctor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Nurse": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Admin": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Administrative": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Team": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicalHistory": {
+    "dataSource": "db",
+    "public": false
+  },
+  "KeyValuePair": {
+    "dataSource": "db",
+    "public": false
+  },
+  "MedicalRecord": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicalRecordGroup": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SharedPermission": {
+    "dataSource": "db",
+    "public": true
+  },
+  "FamilyMedicalHistory": {
+    "dataSource": "db",
+    "public": false
+  },
+  "SocialHistory": {
+    "dataSource": "db",
+    "public": false
+  },
+  "SexualHistory": {
+    "dataSource": "db",
+    "public": false
+  },
+  "DetailedMedicalRecord": {
+    "dataSource": "db",
+    "public": false
+  },
+  "user": {
+    "dataSource": "db",
+    "public": false
+  },
+  "container": {
+    "dataSource": "storageProvider",
+    "public": false
+  },
+  "Email": {
+    "dataSource": "myEmail"
+  },
+  "Image": {
+    "dataSource": "db",
+    "public": false
+  }
+}

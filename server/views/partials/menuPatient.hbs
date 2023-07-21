@@ -1,0 +1,75 @@
+ <div class="ui segment" style="background-color: dodgerblue;color:white; height: 600px;">
+    <div class="ui relaxed divided list">
+        <a class="item">
+            <div class="content"  style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="user icon" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"  ></i>
+                <div class="header" style="color:white;">{{this.patient.LastName}} </div>
+                        Bem-vindo
+            </div>
+        </a>
+        <a class="item"  href="{{this.medRecordsGroup}}" >
+            <div class="content"  style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="users icon" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"  ></i>
+                <div class="header" style="color:white;">Meus Grupos de Ficha</div>
+                        Consultar os grupos de ficha
+            </div>
+        </a>
+                                    
+        <a class="icon" onclick="showPatientNotification()">
+        <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+            <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+            <div class="header" style="color:white;">Notificações</div>
+                Tens  {{length}} notificações
+        </div>
+        </a>
+        
+        <a class="item" onclick="showPatientSexualHistory()">
+            <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+                <div class="header" style="color:white;">Histórico Sexual</div>
+                    Histórico Sexual do Utente
+            </div>
+        </a>
+
+        <a class="item" onclick="showPatientMedicalHistory()">
+            <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+                <div class="header" style="color:white;">Histórico Médico</div>
+                    Histórico Médico do Utente
+            </div>
+        </a>
+        <a class="item" onclick="showPatientFamilyHistory()">
+            <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+                <div class="header" style="color:white;">Histórico Familiar</div>
+                    Histórico Médico-Familiar do Utente
+            </div>
+        </a>
+        <a class="item" onclick="showPatientSocialHistory()">
+            <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+                <div class="header" style="color:white;">Histórico Social</div>
+                    Histórico Social do Utente
+            </div>
+        </a>
+        <a class="item" onclick="showPatientPersonalInfo()">
+            <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+                <div class="header" style="color:white;">Informações Pessoais</div>
+                    Informações Pessoais do Utente
+            </div>
+        </a>
+        <a class="item" onclick="showChangePassword()">
+            <div class="content" style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray' " >
+                <i class="bell icon " style="color:lightgray;" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='lightgray'"></i>
+                <div class="header" style="color:white;">Mudar Password</div>
+                    Mudar a password do Utente
+            </div>
+        </a>
+                                    
+                                  
+                                </div>
+                                <br>  <br>
+                    </div> 
+                                    
+                        

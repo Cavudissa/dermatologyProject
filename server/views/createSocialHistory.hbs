@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+     {{> shortLoggedMenu home="active"}}    
+    
+
+
+<div class="ui inverted ">
+      <form class="ui form  createSocialHistory-class"  method="POST" action="{{postSocialHistory}}">
+             <h4 class="ui dividing header">História Social</h4>
+             
+             <div class="field">
+                          <div class="field violet">
+                                  <input type="text" name="ethnicity" placeholder="Etnia" required >
+                          </div>
+                    </div>
+            </div>
+            <div class="field">
+                    <label>Exercício físico</label>
+                                                            <select class="ui dropdown" name="exercise" required>        
+                                                                    <option value="">exercicio...</option>
+                                                                    <option value="Sedentário">Sedentário</option>
+                                                                    <option value="Pouco intenso">Pouco intenso</option>
+                                                                    <option value="Moderado">Moderado</option>  
+                                                                    <option value="Muito intenso">Muito intenso</option>    
+                                                                </select>
+            </div>
+            <div class="field">
+                    <label>Consumo de álcool</label>
+                                                            <select class="ui dropdown" name="alcohol" required>        
+                                                                    <option value="">consumo...</option>
+                                                                    <option value="Nulo">Nulo</option>
+                                                                    <option value="Moderado">Moderado</option>
+                                                                    <option value="Alcoolismo">Alcoolismo</option>      
+                                                                </select>
+            </div>
+            <div class="field">
+                    <label>Sujeito a exposição solar </label>
+                                                            <select class="ui dropdown" name="sunExposure" required>        
+                                                                    <option value="">exposição...</option>
+                                                                    <option value="Uso de protetor solar">Uso de protetor solar</option>
+                                                                    <option value="Uso de óculos escuros">Uso de óculos escuros</option> 
+                                                                </select>
+            </div>         
+           <div class="field">
+                  <div class="inline fields">
+                         <div class="twelve wide field">
+                                <input type="checkbox" name="animals" value="Sim">Exposição a animais<br>
+                          </div>
+                        
+                          <div class="four wide field">
+                                 <input type="checkbox" name="drugs" value="Sim">Drogas recreacionais<br>
+                          </div>
+                    </div>   
+                                
+            </div>                       
+            
+            <div class="field">
+                <div class="field">
+                    <input type="checkbox" name="hobbies" value="Sim">Hobbies<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="trips" value="Sim">Viagens<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="smoking" value="Sim">Tabagismo<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="makeup" value="Sim">Uso diário de maquilhagem<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="systemicDrugs" value="Sim">Uso de medicamentos sistémicos<br>
+                </div>
+                <div class="field">
+                    <input type="text" name="activity" placeholder="atividade profissional"><br>
+                </div>
+                <div class="field">
+                    <input type="text" name="alimentation" placeholder="alimentação"><br>
+                </div>
+                <div class="field">
+                    <input type="text" name="other" placeholder="Other..."><br>
+                </div>
+            </div>
+              <div class="field">
+                   <input id="submit-socialhistory-id"class="ui inverted primary button" type="submit" name="submit-administrative" value="submit">
+               </div>  <br><br> <br>
+        </form>
+           </div>      
+
+
+
+    </div>
+    </body>
+</html>

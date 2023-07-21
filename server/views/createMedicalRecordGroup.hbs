@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}    
+<div class="ui inverted ">
+
+      <form class="ui form createmedicalrecordgroup-class" method="POST" action="{{postURL}}" onsubmit="return submitmedrecordgroup()">
+            <h4 class="ui dividing header">História geral da doença atual</h4>
+            <div class="ui stackable two column grid formscreate">
+                <div class="column  ">
+                    <div class="two fields">
+                            <div class="field">
+                                <label>Patologia</label>
+                                <input type="text" name="pathology" required>
+                            </div>
+                        
+                        <div class="field">
+                            <label>Queixa Principal</label>
+                            <input type="text" name="mainComplaint" required>
+                        </div>
+
+
+                    </div>  
+
+                    <div class="two fields">
+                            <div class="field">
+                                <label>Quando começou</label>
+                                <input type="text" name="when" required>
+                            </div>
+                            
+                            <div class="field">
+                                <label>Parte do corpo onde começou</label>
+                                <input type="text" name="location" required>
+                            </div>
+
+
+                    </div> 
+
+                    <div class="two fields">
+                            <div class="field">
+                                <label>Descrição</label>
+                                <input type="text" name="description" required>
+                           </div>
+
+                            <div class="field">
+                                    <label>Como se espalhou/disseminou </label>
+                                    <input type="text" name="disseminated" required>
+                            </div>
+
+                    </div> 
+
+                    <div class="two fields">
+                            <div class="field">
+                                    <label>Impressão local: Tipo</label>
+                                    <select class="ui dropdown" name="type" required>        
+                                            <option value="">...</option>
+                                            <option value="Dor">Dor</option>
+                                            <option value="Prurido">Prurido</option>
+                                            <option value="Queimadura ">Queimadura </option> 
+                                            <option value="Nula">Nula</option>     
+                                    </select>
+                            </div>
+                            <div class="field">
+                                    <label>Impressão local: Intensidade</label>
+                                    <select class="ui dropdown" name="intensity" required>        
+                                            <option value="">...</option>
+                                            <option value="Sem dor">Sem dor</option>
+                                            <option value="Suave">Suave</option>
+                                            <option value="Moderada">Moderada</option>  
+                                            <option value="Severa">Severa</option>      
+                                    </select>
+                            </div>
+
+                     </div>
+
+                      <div class="two fields">
+                                                
+                             <div class="field">
+                                    <label>Impressão local: Constância</label>
+                                    <select class="ui dropdown" name="constancy" required>         
+                                            <option value="">...</option>
+                                            <option value="Constante">Constante</option>
+                                            <option value="Esporádica">Esporádica</option>
+                                            <option value="Periódica">Periódica</option>  
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>Impressão local: Dispersão</label>
+                                    <select class="ui dropdown" name="dispersal" required>        
+                                            <option value="">...</option>
+                                            <option value="Localizada">Localizada</option>
+                                            <option value="Disseminada">Disseminada</option>
+                                            <option value="Generalizada">Generalizada</option>  
+                                            <option value="Universal">Universal</option>      
+                                    </select>
+                                </div>
+
+                     </div> 
+ 
+                </div>
+                <div class="column">
+                         <div class="two fields">
+                                <div class="field">
+                                        <label>Fatores de provocação</label>
+                                        <input type="hidden" value="" name="trigger" checked style="display:none"> 
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Nenhuma" checked> Nenhuma<br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Calor">Calor<br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Estação do ano">Estação do ano <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Exercício">Exercício <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Frio">Frio <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Gravidez">Gravidez <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Situações de stress">Situações de stress <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Sol">Sol <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Viagens">Viagens <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="trigger" value="Uso de medicação">Uso de medicação <br>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label>Como evoluíram as lesões individuais </label>
+                                        <div class="field">
+                                            <label>Alterações </label>
+                                            <input type="hidden" value="" name="injuryChanges" checked style="display:none">
+                                            <div class="field">
+                                                <input type="checkbox" name="injuryChanges" value="Nenhuma" checked> Nenhuma<br>
+                                            </div> 
+                                            <div class="field">
+                                                <input type="checkbox" name="injuryChanges" value="Cor">Cor <br>
+                                            </div>
+                                            <div class="field">
+                                                <input type="checkbox" name="injuryChanges" value="Secreção">Secreção <br>
+                                            </div>
+                                            <div class="field">
+                                                <input type="checkbox" name="injuryChanges" value="Tamanho">Tamanho<br>
+                                            </div>
+                                        </div>
+
+                                 </div>        
+                </div>
+
+                 <div class="two fields">
+                
+                    <div class="field">
+                            <label>Evolução</label>
+                            <select class="ui dropdown" name="injuryEvolution" required>        
+                                    <option value="">...</option>
+                                    <option value="Contínua">Contínua</option>
+                                    <option value="Em surtos">Em surtos</option>
+                            </select>
+                     </div>
+            
+                        <div class="field">
+                            <label>Realização de algum tratamento prévio? </label>
+                            <select class="ui dropdown" name="prevTreatment" required>        
+                                    <option value="">...</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                            </select>
+                        </div>
+                    
+                    </div> 
+                <div class="two fields">
+
+
+                         <div class="field">
+                                        <label>Outros sintomas constatados pelo doente</label>
+                                        <input type="hidden" value="" name="others" checked style="display:none">
+                                        <div class="field">
+                                            <input type="checkbox" name="others" value="Nenhuma" checked> Nenhuma<br>
+                                        </div>  
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Arrepios">Arrepios<br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Calvície">Calvície <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Cefaleia">Cefaleia <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Diabetes">Diabetes  <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Fadiga">Fadiga <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Falta de apetite ">Falta de apetite  <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Febre">Febre <br>
+                                        </div>
+                                        <div class="field">
+                                        <input type="checkbox" name="others" value="Fraqueza">Fraqueza <br>
+                                        </div>
+                                    </div>
+                                  <div class="field">
+
+                                              <div class="field">
+                                    <input type="checkbox" name="others" value="Irregularidade menstrual">Irregularidade menstrual  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Mal-estar">Mal-estar<br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Náusea">Náusea  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Ganho de Peso">Ganho de Peso  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Perda de Peso">Perda de Peso  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Rinorreia ">Rinorreia  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Sudorese / hiperidrose">Sudorese / hiperidrose  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Tosse">Tosse  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Vómitos">Vómitos  <br>
+                                    </div>
+                                    <div class="field">
+                                    <input type="checkbox" name="others" value="Outros">Outros  <br>
+                                    </div>   
+
+                                  </div>  
+                                   
+                            </div>
+                                
+
+                 </div> 
+            
+             <div class="field">
+                                    <input id="submit-medrecordgroup-id" class="ui inverted primary button" type="submit" name="submit-medicalrecordgroup" value="submit">
+             </div> 
+               
+            <br><br> <br>
+            </div>
+        </form>
+           </div>      
+    
+    </div>
+    </body>
+</html>

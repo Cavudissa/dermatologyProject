@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    {{> head}}
+
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+     {{> shortLoggedMenu home="active"}} 
+         
+         <div class="ui stackable two column grid aliceblue" >
+               <div class="column  five wide fields div400">             
+                    <a class="item ui blue tag label backtomenu"  href="{{backToAdministrative}}"   >
+                            
+                            Voltar ao Menu                           
+                    </a>
+                   </div>
+                    <div class="column">
+                  {{#if this.isNotArray}}
+                        <div class="column"><h2>Não existem {{StaffMemberRole}} Nesta equipa!</h2></div>
+                  {{/if}}      
+                  {{#each this.staffMembers}}
+                    <div class="ui info message">
+                      <i class="users icon"></i>
+                      
+                      <h2 class="header">
+                        {{StaffMemberRole}}
+                      </h2>
+                      <ul class="list"> 
+                          <li><a class="item"  href="{{StaffMemberURL}}"  > {{StaffMemberName}}</a> </li>
+                          <li> {{StaffMemberEmail}} </li>
+                          <a class="ui teal ribbon  label item" onclick="removeMember('{{StaffMemberEmail}}','{{StaffMemberRole}}')" ><i class="delete icon"></i>Eliminar</a>      
+                      </ul>
+                    </div>
+                  {{/each}}
+                            
+                    </div>
+
+    </div>
+            
+       
+        </div>
+    </body>

@@ -1,0 +1,80 @@
+{
+  "name": "DetailedMedicalRecord",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Dimension": {
+      "type": "string",
+      "required": true
+    },
+    "InjuryType": {
+      "type": "string",
+      "required": true
+    },
+    "CutaneousLesion": {
+      "type": "string",
+      "required": true
+    },
+    "Arrangement": {
+      "type": "string",
+      "required": true
+    },
+    "Texture": {
+      "type": "string",
+      "required": true
+    },
+    "PrimaryInjuryType": {
+      "type": "string",
+      "required": true
+    },
+    "Evaluation": {
+      "type": "string",
+      "required": true
+    },
+    "LymphNodes": {
+      "type": "string",
+      "required": true
+    },
+    "AxillaryChains": {
+      "type": "string",
+      "required": true
+    },
+    "InguinalChains": {
+      "type": "string",
+      "required": true
+    },
+    "InterimDiagnosis": {
+      "type": "string",
+      "required": true
+    },
+    "ComplementaryExams": {
+      "type": "string",
+      "required": true
+    },
+    "CytopathologicalAnalysis": {
+      "type": "string",
+      "required": true
+    },
+    "Diagnosis": {
+      "type": "string",
+      "required": true
+    },
+    "Date": {
+      "type": "string",
+      "required": true
+    },
+    "TeamNotes": {
+      "type": [
+        "KeyValuePair"
+      ],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

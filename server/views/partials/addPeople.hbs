@@ -1,0 +1,57 @@
+<div>
+ <div class="column"> <h3>Pedido de Partilha </h3></div>
+    <br>
+
+         <div class="item ui blue tag label"  style="padding:8%;font-size: 15px" onclick="showSharePatientMedicalRecord()"  >Adicionar Paciente</div>
+         <div class="item ui green tag label"  style="padding:8%;font-size: 13px"  onclick="showAddStaffMember()"  >Adicionar Médicos e Enfermeiros</div>
+
+                    <br/>    <br/> 
+                    <form id ="share-patient-id" class="ui form createPatient-class"method="POST" action="{{SharePatientMedicaRecordURL}}" style="display:none">
+                         <h2>Pedir Permissão De Acesso ao Utente</h2>
+                         <input  type="hidden" name="instituitionId1" value="{{instituitionID}}" >            
+                          
+                          <div class="inline fields">
+                                 <div class="nine wide field">
+                                      EMAIL<input placeholder="insira o email do paciente  " type="text" name="patientEmail" required>
+                                  </div>
+                                    ID
+                                     <div class="nine wide field">
+                                            <input placeholder="insira o id do team  " type="text" name="teamId" required>
+                                     </div>
+                                        
+                          </div>
+                            <div class="field">
+                                <input  id="submit-add-people"class="ui inverted primary button" type="submit" name="submit-patient" value="submit">
+                            </div> 
+                        
+                        </form>         
+
+                        <form id ="add-staff-member-id" class="ui form createPatient-class"method="POST" action="{{AddPeopleURL}}" style="display:none; color:green;">
+                          
+                             <h2 >Adicionar Médico ou Enfermeiro</h2>
+                                <input  type="hidden" name="instituitionId2" value="{{instituitionID}}" >
+                                
+                                    <div class="inline fields">
+                                            <div class="ten wide field">
+                                               EMAIL <input placeholder="insira o email  " type="text" name="memberEmail" required>
+                                            </div>
+
+                                            <div class="seven wide field">
+                                                        <select class="ui dropdown" name="role" required>
+                                                            <option value="">Escolha Um titulo</option> 
+                                                            <option value="doctor">Doctor</option>
+                                                            <option value="nurse">Nurse</option>
+                                                          
+                                                    </select>
+                                                </div>
+                                                    
+                                        </div>
+                                        <div class="field">
+                                            <input  id="submit-add-people"class="ui inverted primary button" type="submit" name="submit-member" value="submit">
+                                        </div> 
+                                    
+                                    </form>   
+                            
+                            
+              
+</div>

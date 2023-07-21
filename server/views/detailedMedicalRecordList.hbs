@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>  
+
+    <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}    
+         <div class="ui stackable two column grid aliceblueclass " >
+           <div class="column  three wide fields div600">
+              <div>
+               <a class="item ui blue tag label backtomenu"  href="{{this.backTo}}" >
+                      Voltar ao Menu Anterior                           
+               </a></div> <br><br>
+
+                <div>
+                    <a style="display:none" href="#" class="item ui blue tag label sm-options" id="compareOrCreateId" onclick="return getCompareFiles()"> Comparar Sinais</a>  
+                </div>
+            </div>
+           
+            <div class="column" >
+                <input id="token"  type="hidden" value="{{Token}}">
+                <input id="compareURI"  type="hidden" value="{{compareURI}}">
+                <div class="two fields">
+
+                        <div class="field" id="createNewDetailedMedicalRecordId" style="display:block"> 
+                                <h4 class="cornflowerblueclass">Avaliação Detalhada</h4>
+                              {{#each this.detailedmedicalRecords}}
+                                    <div class="ui info message">
+                                        <i class="clone icon"></i>
+                                        <h2 class="header"> {{Date}}</h2>
+                                        <a href="detailedmedrecords/{{id}}?accessToken={{../this.Token}}">Ver os detalhes...</a>
+                                        {{#if ../this.role}}
+                                            <div class="ui checkbox" align="right">
+                                                <input class="compare" type="checkbox" value="{{id}}" onclick="compareAlert()">
+                                                <label>Comparar</label>
+                                            </div>
+                                        {{/if}}
+                                    </div>                  
+                                {{/each}}
+                                {{#if this.role}}
+                                    <a class="ui blue ribbon  label item " href="{{this.detailedmedRecordsForm}}">Criar Nova Avalição</a>
+                                {{/if}}
+
+                        </div>
+                </div>
+               
+
+            </div>    
+
+        </div>
+      
+        </div>
+    </body>
+</html>  
+
+  

@@ -1,0 +1,16 @@
+<style>
+
+
+</style>
+
+<div class="ui pointing menu ">
+    <a class="item ui violet basic button" href="/home"><img class="ui mini image" 
+    src="http://www.shcollege.ac.in/Images/DepartmentMenus/Home.png" ></a>
+    {{#if particular}}
+        <a class="item  right ui primary basic button " href="{{logout}}">Terminar Sessão</a>
+    
+    {{else if administrative}}
+        <a class="item  right ui primary basic button " href="{{logout}}">Terminar Sessão</a>
+    {{/if}}
+</div>
+

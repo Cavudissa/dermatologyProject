@@ -1,0 +1,61 @@
+{
+  "name": "Dermatology",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "test": "mocha --no-timeouts",
+    "dev": "nodemon server/server.js --watch common --watch server --watch client"
+  },
+  "dependencies": {
+    "adal-node": "^0.1.22",
+    "azure-arm-authorization": "3.1.1",
+    "azure-arm-keyvault": "^0.11.4",
+    "azure-arm-resource": "^1.6.1-preview",
+    "azure-graph": "1.1.1",
+    "azure-keyvault": "^0.11.0",
+    "azure-storage": "^2.8.2",
+    "bluebird": "^3.5.1",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "crypto-js": "^3.1.9-1",
+    "crypto-json": "^2.0.0",
+    "formidable": "^1.2.1",
+    "generate-password": "^1.4.0",
+    "hbs": "^4.0.1",
+    "helmet": "^3.10.0",
+    "keygenerator": "^1.0.4",
+    "loopback": "^3.20.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^5.0.0",
+    "loopback-component-storage": "^3.3.1",
+    "loopback-connector-mongodb": "^3.4.4",
+    "moment": "^2.15.1",
+    "ms-rest": "^1.15.0",
+    "ms-rest-azure": "^1.15.0",
+    "serve-favicon": "^2.0.1",
+    "storage": "^0.2.0",
+    "strong-error-handler": "^2.3.2",
+    "uid-generator": "^1.0.0",
+    "uuid-token-generator": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "nsp": "^2.1.0",
+    "supertest": "^3.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "Dermatology"
+}

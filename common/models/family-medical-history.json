@@ -1,0 +1,42 @@
+{
+  "name": "FamilyMedicalHistory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Atopias": {
+      "type": "string",
+      "required": true
+    },
+    "Baldness": {
+      "type": "string",
+      "required": true
+    },
+    "Cancer": {
+      "type": "string",
+      "required": true
+    },
+    "Cutaneous": {
+      "type": "string",
+      "required": true
+    },
+    "Diabetes": {
+      "type": "string",
+      "required": true
+    },
+    "SkinDiseases": {
+      "type": "string",
+      "required": true
+    },
+    "Others": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

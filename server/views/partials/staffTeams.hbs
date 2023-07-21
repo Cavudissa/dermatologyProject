@@ -1,0 +1,18 @@
+<div class="ui info message">
+    <i class="clipboard list icon"></i>
+    <ul class="list">
+        {{#each this.Teams}}
+            <h4>Designação da Equipa: {{this.Team.TeamName}}</h4>
+            <li>Líder da Equipa: {{this.Leader.Name}} {{this.Leader.LastName}}</li>
+            <li>Utentes
+                <ul class="list">
+                    {{#each this.Patient}}
+                        <a href="{{../../this.Staff.id}}/team/{{../this.Team.id}}/patient/{{id}}?accessToken={{../../this.Token}}">{{Name}} {{LastName}}</a>
+                    {{/each}}
+                </ul>
+            </li>
+            <a href="{{../this.Staff.id}}/staff/{{this.Team.id}}?accessToken={{../this.Token}}" class="ui right pointing blue basic label item " id="sm-staff-options2" ><i class="user icon"></i>Membros Equipa</a>         
+        {{/each}}
+        <br> <br> <br>
+    </ul>
+</div>

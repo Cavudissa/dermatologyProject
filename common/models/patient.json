@@ -1,0 +1,168 @@
+{
+  "name": "Patient",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Birthdate": {
+      "type": "string",
+      "required": true
+    },
+    "Gender": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "MaritalStatus": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "string",
+      "required": true
+    },
+    "IDType": {
+      "type": "string",
+      "required": true
+    },
+    "IDNumber": {
+      "type": "string",
+      "required": true
+    },
+    "NIF": {
+      "type": "string"
+    },
+    "RegistedInstitutions": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    }
+    ,
+    "Address": {
+      "type": "string",
+      "required": true
+    },
+    "CityofBirth": {
+      "type": "string",
+      "required": true
+    },
+    "CountryofBirth": {
+      "type": "string",
+      "required": true
+    },
+    "Nationality": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "InstituteID": {
+      "type":"string",
+      "required": true
+    },
+    "Deceased": {
+      "type": "boolean",
+      "default": false
+    },
+    "PostalCode": {
+      "type": "string",
+      "required": true
+    },
+    "Status": {
+      "type": "boolean",
+      "default": true
+    },
+    "kek": {
+      "type": "string",
+      "required": true
+    },
+    "dek": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "medicalRecordGroups": {
+      "type": "hasMany",
+      "model": "MedicalRecordGroup",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "familyHistory": {
+      "type": "hasOne",
+      "model": "FamilyMedicalHistory",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "sexualHistory": {
+      "type": "hasOne",
+      "model": "SexualHistory",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "socialHistory": {
+      "type": "hasOne",
+      "model": "SocialHistory",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "medicalHistory": {
+      "type": "hasOne",
+      "model": "MedicalHistory",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "team": {
+      "type": "belongsTo",
+      "model": "Team",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

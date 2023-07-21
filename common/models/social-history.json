@@ -1,0 +1,70 @@
+{
+  "name": "SocialHistory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Alimentation": {
+      "type": "string",
+      "required": true
+    },
+    "AlcoholConsumption": {
+      "type": "string",
+      "required": true
+    },
+    "Ethnicity": {
+      "type": "string",
+      "required": true
+    },
+    "PhysicalExercise": {
+      "type": "string",
+      "required": true
+    },
+    "ExposureToAnimals": {
+      "type": "string",
+      "required": true
+    },
+    "RecreationalDrugs": {
+      "type": "string",
+      "required": true
+    },
+    "SunExposure": {
+      "type": "string",
+      "required": true
+    },
+    "Hobbies": {
+      "type": "string",
+      "required": true
+    },
+    "RecentTrips": {
+      "type": "string",
+      "required": true
+    },
+    "Smoking": {
+      "type": "string",
+      "required": true
+    },
+    "DailyMakeUpUse": {
+      "type": "string",
+      "required": true
+    },
+    "SystemicDrugsUse": {
+      "type": "string",
+      "required": true
+    },
+    "ProfessionalActivity": {
+      "type": "string",
+      "required": true
+    },
+    "Other": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

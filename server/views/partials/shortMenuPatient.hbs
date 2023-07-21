@@ -1,0 +1,42 @@
+<div class="ui segment" id="sm-main-div-id">
+      <div class="ui relaxed divided list">
+
+       <div class="item">  
+            <a class="ui green ribbon label  item  " id="sm-patient-wellcome" ><i class="user icon"></i>Bem vindo, {{this.patient.LastName}} </a>
+        </div>  </br>
+
+            <div class="item" onclick="showdHidePatient('patient-hist-id')">  
+            <a class="ui  blue tag label item sm-options"><i class="file alternate outline icon"></i>Consultar Histórico</a>
+            </div> 
+             <div id="patient-hist-id" class="patient-show-hide">
+                       <a class="ui teal ribbon  right label item "  id="sm-patient-options1" onclick="showPatientSexualHistory()"><i class="users icon"> </i>Histórico Sexual</a> 
+                </br>  <a class="ui teal ribbon  label item " id="sm-patient-options2" onclick="showPatientMedicalHistory()" ><i class="user md icon"></i>Histórico Médico</a>
+                </br>  <a class="ui teal ribbon  label item " id="sm-patient-options3" onclick="showPatientFamilyHistory()"><i class="users icon"></i>Histórico Familiar</a>
+                 </br>  <a class="ui teal ribbon  label item " id="sm-patient-options4"  onclick="showPatientSocialHistory()"><i class="users icon"></i>Histórico Social</a>
+             </div></br>    
+   
+      
+       <div onclick="showdHidePatient('patient-notification-id')" > 
+            <a class="ui  blue tag label item sm-options"  ><i class="bell outline icon"></i>Fichas e Notificações </a></div> 
+     
+             <div  id="patient-notification-id" class="patient-show-hide">
+                 <a class="ui teal ribbon  label item " id="sm-patient-options5" onclick="showPatientNotification()">
+                   <i class="icon mail"> </i> Notificações
+                   <div class="floating ui red label"> {{length}} </div>
+                 </a> 
+                </br>  <a class="ui teal ribbon  label item " id="sm-patient-options6"  href="{{this.medRecordsGroup}}"><i class="open folder icon"></i>Grupos de Ficha</a>
+             </div> </br>  
+      
+       <div onclick="showdHidePatient('patient-other-id')" >  
+           <a class="ui blue tag label item sm-options"><i class="info icon"></i>Outras Informações</a></div> 
+       
+             <div id="patient-other-id" class="patient-show-hide" >
+                       <a class="ui teal ribbon  label item " id="sm-patient-options7" onclick="showPatientPersonalInfo()"><i class="plus icon"></i>Informações Pessoais</a> 
+                </br>  <a class="ui teal ribbon  label item " id="sm-patient-options8" onclick="showChangePassword()" ><i class="user icon"></i>Mudar Password</a>
+                </br>  <a class="ui teal ribbon  label item " id="sm-patient-options8" href="{{staffUrl}}" ><i class="plus icon"></i>Consultar equipas com permissões</a>
+
+             </div>    
+      
+        
+    </div>                 
+ </div>

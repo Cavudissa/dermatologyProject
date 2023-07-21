@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}//server//server.js",
+            "env": {
+              "CLIENT_ID": "8ff324a0-426c-4176-b7de-70e1e77db9d0",
+              "DOMAIN":"f37904c8-3eab-4232-958c-555e8bab2d82",
+              "APPLICATION_SECRET":"d2AoTod2fyPopGsRLa9jLjg/xX74a19cl65VWzZzfM8=",
+              "AZURE_SUBSCRIPTION_ID":"6dce9afb-85bd-4fc7-9ef0-ab613a162ffb",
+              "OBJECT_ID":"99a779c2-8adf-43b6-b56c-5ef67dad3643",
+              "VAULT_URI":"https://dermatology.vault.azure.net/",
+              "Azure_KEYS":"https://dermatology.vault.azure.net/keys/",
+              "AZURE_STORAGE_ACCOUNT":"cs26dce9afb85bdx4fc7x9ef",
+              "AZURE_STORAGE_ACCESS_KEY":"Yg4WaUzm87fEJt4IOVUjs3Hdu+y/x61ueWn3lsoZjN+onGWgBnS57K0CaZZO8zaXv5mxEaJTbba6diSALyJBww=="
+            }        
+        },
+        {
+          "name": "Run mocha",
+          "type": "node",
+          "request": "launch",
+          "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+          "stopOnEntry": false,
+          "args": ["test/**/*.js", "--no-timeouts"],
+          "cwd": "${workspaceRoot}",
+          "runtimeExecutable": null,
+          "env": { 
+            "NODE_ENV": "testing",
+            "CLIENT_ID": "8ff324a0-426c-4176-b7de-70e1e77db9d0",
+            "DOMAIN":"f37904c8-3eab-4232-958c-555e8bab2d82",
+            "APPLICATION_SECRET":"d2AoTod2fyPopGsRLa9jLjg/xX74a19cl65VWzZzfM8=",
+            "AZURE_SUBSCRIPTION_ID":"6dce9afb-85bd-4fc7-9ef0-ab613a162ffb",
+            "OBJECT_ID":"99a779c2-8adf-43b6-b56c-5ef67dad3643",
+            "VAULT_URI":"https://dermatology.vault.azure.net/",
+            "Azure_KEYS":"https://dermatology.vault.azure.net/keys/",
+            "AZURE_STORAGE_ACCOUNT":"cs26dce9afb85bdx4fc7x9ef",
+            "AZURE_STORAGE_ACCESS_KEY":"Yg4WaUzm87fEJt4IOVUjs3Hdu+y/x61ueWn3lsoZjN+onGWgBnS57K0CaZZO8zaXv5mxEaJTbba6diSALyJBww=="
+       }
+        }
+    ]
+}

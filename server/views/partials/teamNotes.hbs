@@ -1,0 +1,23 @@
+{{#each this.TeamNotes}}
+   <div class="ui info message">
+        <i class="clipboard list icon"></i>
+        <h2 class="header"> Titulo: {{Name}}</h2>
+        <ul class="list">
+            <li>Descrição: {{Description}}</li>
+        </ul>          
+ </div>
+{{/each}}
+{{#if this.role}}
+    <div class="field">
+        <label>Adicione a sua nota...</label>
+        <br>
+        <input placeholder = "Titulo da Nota" type="text" name="notes" id="note-id" required>
+        <br>
+        <br>
+        <textarea type="text" name="description" id="description-id" required></textarea>
+        <input type="hidden" value="{{this.addNoteURL}}" id="note-url-id">
+        <br>
+        <input onclick="submitNote()" id="submit-teamnote-id" class="ui inverted primary button" type="submit" name="submit-teamnote" value="submit">
+    </div>
+{{/if}}
+                    

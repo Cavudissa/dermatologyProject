@@ -1,0 +1,15 @@
+{{#each notification }}                
+    <div class="ui info message">
+        <i class="bell icon"></i>
+        <h2 class="header">
+            Permissão de Acesso as Fichas
+        </h2>
+        <ul class="list">
+            <li>{{msg}} </li>
+        </ul>
+        <div class="ui  label" >
+        <i class="accept icon" onclick="acceptShare('{{../shareURL}}','{{team}}')">Aceitar</i>  
+        <i class="delete icon" >Rejeitar</i>
+        </div>
+    </div>                      
+{{/each}}

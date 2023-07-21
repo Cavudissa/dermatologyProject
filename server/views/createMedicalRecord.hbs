@@ -1,0 +1,505 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+        <script>
+                $('.ui.dropdown').dropdown();
+        </script>       
+        {{> head}}
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}    
+<div class="ui inverted ">
+
+      <form class="ui form createmedicalrecord-class" method="POST" action="{{postURL}}">
+            <h4 class="ui dividing header">EXAME FÍSICO GERAL</h4>
+             <div class="ui stackable two column grid formscreate">
+                <div class="column">
+                    <div class="two fields">
+                           
+                                <div class="field">
+                                        <label>Tipo de pele</label>
+                                        <select class="ui dropdown" name="skinType" required>        
+                                                <option value="">...</option>
+                                                <option value="Normal">Normal</option>
+                                                <option value="Seca">Seca</option>
+                                                <option value="Oleosa">Oleosa</option> 
+                                                <option value="Mista">Mista</option>     
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label>Fototipo</label>
+                                        <select class="ui dropdown" name="phototype" required>        
+                                                <option value="">...</option>
+                                                <option value="Branco-pálido">Branco-pálido</option>
+                                                <option value="Branco">Branco</option>
+                                                <option value="Branco-bege">Branco-bege</option> 
+                                                <option value="Pardo claro">Pardo claro</option>
+                                                <option value="Pardo">Pardo</option>
+                                                <option value="Negro">Negro</option>     
+                                        </select>
+                                    </div>
+
+                        </div>  
+
+                    <div class="two fields">
+
+                        <div class="field">
+                                <label>Fotoenvelhecimento da pele</label>
+                                <select class="ui dropdown" name="photoaging" required>        
+                                        <option value="">...</option>
+                                        <option value="Tipo I - sem rugas">Tipo I - “sem rugas"</option>
+                                        <option value="Tipo II - rugas em movimento">Tipo II - “rugas em movimento” </option>
+                                        <option value="Tipo III - rugas em repouso">Tipo III - “rugas em repouso"</option>
+                                        <option value="Tipo IV - somente rugas ">Tipo IV - “somente rugas” </option>     
+                                </select>
+                            </div>
+                        <div class="field">
+                                <label>Bronzeamento atual (origem solar)</label>
+                                <select class="ui dropdown" name="tanning" required>        
+                                        <option value="">...</option>
+                                        <option value="Nulo">Nulo</option>
+                                        <option value="Pouco Intenso">Pouco Intenso </option>
+                                        <option value="Médio Intenso">Médio Intenso</option>
+                                        <option value="Muito Intenso">Muito Intenso</option>     
+                                </select>
+                            </div>
+                                            
+                    </div> 
+
+                    <div class="two fields">
+                            
+                         <div class="field">
+                                <label>Palidez</label>
+                                <select class="ui dropdown" name="pallor" required>        
+                                        <option value="">...</option>
+                                        <option value="Generalizada">Generalizada</option>
+                                        <option value="Localizada ou segmentar">Localizada ou segmentar</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Integridade</label>
+                                <input placeholder = "integridade"type="text" name="integrity" required>                               
+                            </div>      
+
+                       </div> 
+
+                    <div class="two fields">
+                           
+                         <div class="field">
+                                <label>Humidade</label>
+                                <select class="ui dropdown" name="humidity" required>        
+                                        <option value="">...</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Seca">Seca</option>
+                                        <option value="Aumentada">Aumentada</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Textura</label>
+                                <select class="ui dropdown" name="texture" required>        
+                                        <option value="">...</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Lisa/Fina">Lisa/Fina</option>
+                                        <option value="Àspera">Àspera</option>
+                                        <option value="Enrugada">Enrugada</option>
+                                </select>
+                            </div>
+
+                     </div>
+
+                      <div class="two fields">
+                                                
+                              <div class="field">
+                                    <label>Espessura </label>
+                                    <select class="ui dropdown" name="thickness" required>        
+                                            <option value="">...</option>
+                                            <option value="Normal">Normal</option>
+                                            <option value="Atrófica">Atrófica</option>
+                                            <option value="Hipertrófica/espessa">Hipertrófica/espessa</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>Temperatura</label>
+                                    <input placeholder = "temperatura"type="text" name="temperature" required>                               
+                                </div>   
+
+                     </div> 
+
+                   <div class="two fields">
+                                     
+                        <div class="field">
+                                <label>Elasticidade</label>
+                                <select class="ui dropdown" name="elasticity" required>        
+                                        <option value="">...</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Aumentada">Aumentada</option>
+                                        <option value="Diminuída">Diminuída</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Mobilidade</label>
+                                <select class="ui dropdown" name="mobility" required>        
+                                        <option value="">...</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Aumentada">Aumentada</option>
+                                        <option value="Diminuída ou Ausente">Diminuída ou Ausente</option>
+                                </select>
+                            </div>
+
+                   </div>
+
+                   <div class="two fields">
+
+                        <div class="field">
+                                <label>Turgor</label>
+                                <select class="ui dropdown" name="turgor" required>        
+                                        <option value="">...</option>
+                                        <option value="Lenta (tempo para voltar ao lugar maior 3 segundos)">Lenta (tempo para voltar ao lugar maior 3 segundos)</option>
+                                        <option value="Normal (tempo para voltar ao lugar menor ou igual a 3 segundos)">Normal (tempo para voltar ao lugar menor ou igual a 3 segundos)</option>
+                                        <option value="Assimetrias">Assimetrias</option>
+                                        <option value="Coloração da pele">Coloração da pele</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Sensibilidade</label>
+                                <select class="ui dropdown" name="sensivity" required>        
+                                        <option value="">...</option>
+                                        <option value="Dolorosa">Dolorosa</option>
+                                        <option value="Tátil">Tátil</option>
+                                        <option value="Térmica">Térmica</option>
+                                </select>
+                            </div>
+
+                         </div>
+
+                        <div class="field">
+                                <label>Morfologia geral e padrão dominante</label>
+                        </div>
+                                            
+                                <div class="two fields">
+
+                                        <div class="field">
+                                            <label>Quantidade</label>
+                                            <select class="ui dropdown" name="quantity" required>        
+                                                    <option value="">...</option>
+                                                    <option value="Simples">Simples</option>
+                                                    <option value="Muitas">Muitas</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label>Comparação das lesões</label>
+                                            <select class="ui dropdown" name="comparison" required>        
+                                                    <option value="">...</option>
+                                                    <option value="Semelhantes">Semelhantes</option>
+                                                    <option value="Distintas">Distintas</option>
+                                            </select>
+                                        </div>
+
+                                </div>
+                                                            
+                                 <div class="two fields">
+                                            <div class="field">
+                                                <label>Distribuição (incluindo couro cabeludo, mucosas, palmas e solas)</label>
+                                                <select class="ui dropdown" name="distribution" required>        
+                                                        <option value="">...</option>
+                                                        <option value="Localizada ">Localizada</option>
+                                                        <option value="Generalizada ">Generalizada</option>
+                                                        <option value="Disseminada ">Disseminada</option>
+                                                        <option value="Universal  ">Universal </option>
+                                                </select>
+                                            </div>
+
+                                    </div>
+
+                                    <div class="two fields">
+
+                                            <div class="field">
+                                                    <label>Padrão</label>
+                                                    <select class="ui dropdown" name="pattern" required>        
+                                                            <option value="">...</option>
+                                                            <option value="Simetria">Simetria</option>
+                                                            <option value="Áreas de exposição">Áreas de exposição</option>
+                                                            <option value="Regiões intertriginosas (entre os dedos)">Regiões intertriginosas (entre os dedos)</option>
+                                                    </select>
+                                                </div>        
+                                    </div>
+                    
+                 </div>
+
+
+
+
+                <div class="column">
+                                                   
+                 
+                <div class="two fields">
+
+                        <div class="field">
+                        <label>Disposição das lesões</label>
+                            <select class="ui dropdown" name="disposition" required>        
+                                    <option value="">...</option>
+                                    <option value="Isoladas">Isoladas</option>
+                                    <option value="Agrupadas">Agrupadas</option>
+                                    <option value="Espalhadas/dispersas">Espalhadas/dispersas</option>
+                            </select>
+                        </div>
+
+
+                </div>
+
+                  <div class="two fields">
+
+                            <div class="field">
+                                <label>Alterações de cor</label>
+                                <select class="ui dropdown" name="colorChange" required>        
+                                        <option value="">...</option>
+                                        <option value="A lesão esmaece - Pressão com dedo">A lesão esmaece - Pressão com dedo</option>
+                                        <option value="A lesão esmaece - Vitropressão">A lesão esmaece - Vitropressão</option>
+                                        <option value="A lesão possui mais de uma cor">A lesão possui mais de uma cor</option>
+                                        <option value="O centro/borda são de cores distintas">O centro/borda são de cores distintas</option>
+                                </select>
+                            </div>
+
+                    
+                </div>
+
+                  <div class="two fields">
+
+                              <div class="field">
+                            <label>Camadas da pele envolvidas (se o processo afeta)</label>
+                            <select class="ui dropdown" name="layers" required>        
+                                    <option value="">...</option>
+                                    <option value="Epidérmico">Epidérmico</option>
+                                    <option value="Dérmico">Dérmico</option>
+                                    <option value="Subcutâneo">Subcutâneo</option>
+                                    <option value="Anexial">Anexial</option>
+                                    <option value="Combinação de mais de um componente anatómico">Combinação de mais de um componente anatómico</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Coloração da pele</label>
+                            <select class="ui dropdown" name="skinColor" required>        
+                                    <option value="">...</option>
+                                    <option value="Avermelhada (eritrose) - Generalizada">Avermelhada (eritrose) - Generalizada</option>
+                                    <option value="Avermelhada (eritrose) - Localizada">Avermelhada (eritrose) -Localizada</option>
+                                    <option value="Alanranjada">Alanranjada</option>
+                                    <option value="Amarelada">Amarelada</option>
+                                    <option value="Unhas esverdeadas">Unhas esverdeadas</option>
+                                    <option value="Violeta/cianosada">Violeta/cianosada </option>
+                                    <option value="Tons de azul, prateado e cinzento">Tons de azul, prateado e cinzento </option>
+                                    <option value="Preta">Preta </option>
+                                    <option value="Acrómica">Acrómica </option>
+                                    <option value="Hipocrómica">Hipocrómica </option>
+                                    <option value="Fenómeno de Raynaud">Fenómeno de Raynaud</option>
+                            </select>
+                        </div>
+                                
+                  </div>
+
+
+                  <div class="two fields">
+
+
+                        <div class="field">
+                            <label>Outros sinais dermatológicos</label>
+                            <select class="ui dropdown" name="otherSignals" required>        
+                                    <option value="">...</option>
+                                    <option value="Dermografismo">Dermografismo </option>
+                                    <option value="Sinal de Auspitz">Sinal de Auspitz </option>
+                                    <option value="Sinal de Darier">Sinal de Darier </option>
+                                    <option value="Sinal de Koebner">Sinal de Koebner </option>
+                                    <option value="Sinal de Nikolski">Sinal de Nikolski </option>
+                                    <option value="Sinal da vela">Sinal da vela </option>
+                                    <option value="Sinal da unha">Sinal da unha</option>
+                                    <option value="Fenómeno de Koebner ">Fenómeno de Koebner </option>
+                            </select>
+                        </div>
+                    
+                        <div class="field">
+                            <label>Pelos</label>
+                            <select class="ui dropdown" name="hairs" required>        
+                                    <option value="">...</option>
+                                    <option value="Alopecia">Alopecia </option>
+                                    <option value="Canície ">Canície </option>
+                                    <option value="Hipertricose">Hipertricose </option>
+                                    <option value="Hipotricose">Hipotricose </option>
+                                    <option value="Hirsutismo">Hirsutismo</option>
+                                    <option value="Leucotricose">Leucotricose </option>
+                                    <option value="Madarose">Madarose</option>
+                                    <option value="Tonsura ">Tonsura</option>
+                            </select>
+                        </div>
+                    
+                </div>
+
+
+                
+                  <div class="two fields">
+
+                             <div class="field">
+                                <label>Adenomegalia</label>
+                                <input placeholder = "adenomegalia"type="text" name="adenomegalia" required>                               
+                            </div>
+                            <div class="field">
+                                <label>Linfedema</label>
+                                <input placeholder = "linfedema"type="text" name="linfedema" required>                               
+                            </div>
+                                            
+                  </div>
+
+
+                
+                  <div class="field">
+
+                                    <div class="field">
+                                    <label>Localização</label>
+                                    <input value="" type="hidden" name="location" >                               
+                                    <select class="ui multiple selection dropdown" multiple="" id="search-select" name="location" required >
+                                        <option value="">Localização...</option>
+                                        <option value="Escalpe-Superior">Escalpe-Superior</option>
+                                        <option value="Escalpe-Posterior">Escalpe-Posterior</option>
+                                        <option value="Escalpe-Lateral Esquerdo">Escalpe-Lateral esquerdo</option>
+                                        <option value="Escalpe-Lateral direito">Escalpe-Lateral direito</option>
+                                        <option value="Escalpe-Anterior">Escalpe-Anterior</option>
+                                        <option value="Orelha-Esquerda">Orelha-Esquerda</option>
+                                        <option value="Orelha-Direita">Orelha-Direita</option>
+                                        <option value="Testa">Testa</option>
+                                        <option value="Sobrancelhas">Sobrancelhas</option>
+                                        <option value="Pálpebras">Pálpebras</option>
+                                        <option value="Pestanas">Pestanas</option>
+                                        <option value="Nariz">Nariz</option>
+                                        <option value="Face lateral esquerda">Face lateral esquerda</option>
+                                        <option value="Face lateral direita">Face lateral direita</option>
+                                        <option value="Boca">Boca</option>
+                                        <option value="Lábio superior">Lábio superior</option>
+                                        <option value="Lábio inferior">Lábio inferior</option>
+                                        <option value="Queixo">Queixo</option>
+                                        <option value="Barba - Lateral esquerda">Barba - Lateral esquerda</option>
+                                        <option value="Barba - Lateral direita">Barba - Lateral direita</option>
+                                        <option value="Barba - bigode">Barba - bigode</option>
+                                        <option value="Barba - queixo">Barba - queixo</option>
+                                        <option value="Pescoço">Pescoço</option>
+                                        <option value="Peito">Peito</option>
+                                        <option value="Costas">Costas</option>
+                                        <option value="Axila - direita">Axila - direita</option>
+                                        <option value="Axila - esquerda">Axila - esquerda</option>
+                                        <option value="Mama - direita">Mama - direita</option>
+                                        <option value="Mama - esquerda">Mama - esquerda</option>
+                                        <option value="Abdómen - estômago">Abdómen - estômago</option>
+                                        <option value="Zona genital">Zona genital</option>
+                                        <option value="Glúteos">Glúteos</option>
+                                        <option value="Anal">Anal</option>
+                                        <option value="Ombro(Membro Superior Esquerdo)">Ombro (Membro Superior Esquerdo)</option>
+                                        <option value="Ombro(Membro Superior Direito)">Ombro (Membro Superior Direito)</option>
+                                        <option value="Braço(Membro Superior Direito)">Braço (Membro Superior Direito)</option>
+                                        <option value="Braço(Membro Superior Esquerdo)">Braço (Membro Superior Esquerdo)</option>
+                                        <option value="Antebraço(Membro Superior Direito)">Antebraço (Membro Superior Direito)</option>
+                                        <option value="Antebraço(Membro Superior Esquerdo)">Antebraço (Membro Superior Esquerdo)</option>
+                                        <option value="Cotovelo(Membro Superior Direito)">Cotovelo (Membro Superior Direito)</option>
+                                        <option value="Cotovelo(Membro Superior Esquerdo)">Cotovelo (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Parte de cima(Membro Superior Direito)">Mão - Parte de cima (Membro Superior Direito)</option>
+                                        <option value="Mão - Parte de cima(Membro Superior Esquerdo)">Mão - Parte de cima (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Palma(Membro Superior Direito)">Mão - Palma (Membro Superior Direito)</option>
+                                        <option value="Mão - Palma(Membro Superior Esquerdo)">Mão - Palma (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Espaço interdigital(Membro Superior Direito)">Mão - Espaço interdigital (Membro Superior Direito)</option>
+                                        <option value="Mão - Espaço interdigital(Membro Superior Esquerdo)">Mão - Espaço interdigital (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Unhas(Membro Superior Direito)">Mão - Unhas (Membro Superior Direito)</option>
+                                        <option value="Mão - Unhas(Membro Superior Esquerdo)">Mão - Unhas (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Dedos - Polegar(Membro Superior Direito)">Mão - Dedos - Polegar (Membro Superior Direito)</option>
+                                        <option value="Mão - Dedos - Polegar(Membro Superior Esquerdo)">Mão - Dedos - Polegar (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Dedos - Indicador(Membro Superior Direito)">Mão - Dedos - Indicador (Membro Superior Direito)</option>
+                                        <option value="Mão - Dedos - Indicador(Membro Superior Esquerdo)">Mão - Dedos - Indicador (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Dedos - Médio(Membro Superior Direito)">Mão - Dedos - Médio (Membro Superior Direito)</option>
+                                        <option value="Mão - Dedos - Médio(Membro Superior Esquerdo)">Mão - Dedos - Médio (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Dedos - Anelar(Membro Superior Direito)">Mão - Dedos - Anelar (Membro Superior Direito)</option>
+                                        <option value="Mão - Dedos - Anelar(Membro Superior Esquerdo)">Mão - Dedos - Anelar (Membro Superior Esquerdo)</option>
+                                        <option value="Mão - Dedos - Mínimo(Membro Superior Direito)">Mão - Dedos - Mínimo (Membro Superior Direito)</option>
+                                        <option value="Mão - Dedos - Mínimo(Membro Superior Esquerdo)">Mão - Dedos - Mínimo (Membro Superior Esquerdo)</option>
+                                        <option value="Quadril(Membro Inferior Direito)">Quadril (Membro Inferior Direito)</option>
+                                        <option value="Quadril(Membro Inferior Esquerdo)">Quadril (Membro Inferior Esquerdo)</option>
+                                        <option value="Coxa(Membro Inferior Direito)">Coxa (Membro Inferior Direito)</option>
+                                        <option value="Coxa(Membro Inferior Esquerdo)">Coxa (Membro Inferior Esquerdo)</option>
+                                        <option value="Perna(Membro Inferior Direito)">Perna (Membro Inferior Direito)</option>
+                                        <option value="Perna(Membro Inferior Esquerdo)">Perna (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Parte superior(Membro Inferior Direito)">Pé - Parte superior (Membro Inferior Direito)</option>
+                                        <option value="Pé - Parte superior(Membro Inferior Esquerdo)">Pé - Parte superior (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Sola(Membro Inferior Direito)">Pé - Sola (Membro Inferior Direito)</option>
+                                        <option value="Pé - Sola(Membro Inferior Esquerdo)">Pé - Sola (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Calcanhar(Membro Inferior Direito)">Pé - Calcanhar (Membro Inferior Direito)</option>
+                                        <option value="Pé - Calcanhar(Membro Inferior Esquerdo)">Pé - Calcanhar (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Área interdigital(Membro Inferior Direito)">Pé - Área interdigital (Membro Inferior Direito)</option>
+                                        <option value="Pé - Área interdigital(Membro Inferior Esquerdo)">Pé - Área interdigital (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Unhas(Membro Inferior Direito)">Pé - Unhas (Membro Inferior Direito)</option>
+                                        <option value="Pé - Unhas(Membro Inferior Esquerdo)">Pé - Unhas (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Dedos - Polegar(Membro Inferior Direito)">Pé - Dedos - Polegar (Membro Inferior Direito)</option>
+                                        <option value="Pé - Dedos - Polegar(Membro Inferior Esquerdo)">Pé - Dedos - Polegar (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Dedos - Indicador(Membro Inferior Direito)">Pé - Dedos - Indicador (Membro Inferior Direito)</option>
+                                        <option value="Pé - Dedos - Indicador(Membro Inferior Esquerdo)">Pé - Dedos - Indicador (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Dedos - Médio(Membro Inferior Direito)">Pé - Dedos - Médio (Membro Inferior Direito)</option>
+                                        <option value="Pé - Dedos - Médio(Membro Inferior Esquerdo)">Pé - Dedos - Médio (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Dedos - Anelar(Membro Inferior Direito)">Pé - Dedos - Anelar (Membro Inferior Direito)</option>
+                                        <option value="Pé - Dedos - Anelar(Membro Inferior Esquerdo)">Pé - Dedos - Anelar (Membro Inferior Esquerdo)</option>
+                                        <option value="Pé - Dedos - Mínimo(Membro Inferior Direito)">Pé - Dedos - Mínimo (Membro Inferior Direito)</option>
+                                        <option value="Pé - Dedos - Mínimo(Membro Inferior Esquerdo)">Pé - Dedos - Mínimo (Membro Inferior Esquerdo)</option>
+                                        <option value="Mucosa - Bucal">Mucosa - Bucal</option>
+                                        <option value="Mucosa - Frénulo da lingua">Mucosa - Frénulo da lingua</option>
+                                        <option value="Mucosa - Língua">Mucosa - Língua</option>
+                                        <option value="Mucosa - Oral">Mucosa - Oral</option>
+                                        <option value="Mucosa - Nasal">Mucosa - Nasal</option>
+                                        <option value="Mucosa - Prepucial">Mucosa - Prepucial</option>
+                                        <option value="Mucosa - Vaginal">Mucosa - Vaginal</option>
+                                        <option value="Mucosa - Conjuntiva(pálpebras)">Mucosa - Conjuntiva(pálpebras)</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div class="field">
+                                  <label>Lesões</label>
+                         </div>
+                                    
+                              <div class="two fields">
+                                                        
+                                     
+                                      <div class="field">
+                                                <label>Queimadura solar</label>
+                                                <select class="ui dropdown" name="sunburn" required>        
+                                                        <option value="">...</option>
+                                                        <option value="Não Presente">Não Presente</option>
+                                                        <option value="Grau 1">Grau 1</option>
+                                                        <option value="Grau 2">Grau 2</option>
+                                                </select>
+                                        </div>
+
+                                          <div class="field">
+                                            <label>Área do corpo afetada relativa à radiação solar </label>
+                                            <select class="ui dropdown" name="area" required>        
+                                                    <option value="">...</option>
+                                                    <option value="Protegida">Protegida</option>
+                                                    <option value="Exposta">Exposta</option>
+                                            </select>
+                                        </div>
+
+                                 </div>
+
+                                                
+                    
+                 </div>
+                </div>
+
+                    
+                    <div class="field">
+                    <input id="submit-medicalrecord-id" class="ui inverted primary button" type="submit" name="submit-medicalrecordgroup" value="submit">
+                </div> 
+                    
+            <br><br> <br>
+            </div>
+        </form>
+     </div>      
+    
+    </div>
+    </body>
+</html>

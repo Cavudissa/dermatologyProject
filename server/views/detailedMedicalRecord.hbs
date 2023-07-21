@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+        <head>
+                {{> head}}
+        </head>
+        <body bgcolor="#E6E6FA" onload="handleFiles({{this.Images}})">
+                <div class="ui segment">
+                       {{> shortLoggedMenu home="active"}}   
+                        <div class="ui stackable two column grid ">
+                                <div class="column  four wide fields div600" >
+                                        {{> shortMenuDetailedMedicalRecord}} 
+                                </div>
+                                <div class="column">
+                                        <div id="detailed-medical-record-menu-option-id" class="row detailed-medical-record-menu-option-class" style="color:cornflowerblue; display: block;">
+                                                {{>detailedmedicalRecordReport}}   
+                                        </div>                            
+                                        <div id="detailed-medical-record-photos-menu-option-id" class="row detailed-medical-record-menu-option-class" style="color:cornflowerblue; display: none;">
+                                                {{> detailedmedicalRecordPhotos}}   
+                                        </div>
+                                        {{!-- {{This DIV holds the team notes }} --}}
+                                        <div id="team-notes-menu-option-id" class="row detailed-medical-record-menu-option-class" style="color:cornflowerblue; display: none;">
+                                                {{> teamNotes}}   
+                                        </div>   
+                                </div>
+
+                        </div>  
+                </div>
+        </body>
+</html>

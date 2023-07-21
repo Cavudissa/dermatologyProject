@@ -1,0 +1,17 @@
+<div class="ui info message">
+  {{#if this.family}}
+  <h4>Histórico Familiar</h4>
+    <i class="clipboard list icon"></i>
+    <ul class="list">
+      <li>Atopias: {{this.family.Atopias}}</li>
+      <li>Calvície: {{this.family.Baldness}}</li>
+      <li>Cancro: {{this.family.Cancer}}</li>
+      <li>Cutâneas: {{this.family.Cutaneous}}</li>
+      <li>Diabetes: {{this.family.Diabetes}}</li>
+      <li>Patologias de pele: {{this.family.SkinDiseases}}</li>
+      <li>Outras: {{this.family.Others}}</li>
+    </ul>
+  {{else if this.role}}
+    <a href="{{this.postfamilyHistory}}">Adicionar um Histórico Familiar</a>
+  {{/if}}
+</div>

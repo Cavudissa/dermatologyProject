@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+       <div id="h-s-id">{{>menu home="active"}}</div>   
+      <div id="short-header-staff-id" style="display:none;">{{>shortLoggedMenu home="active"}}</div>
+  
+     
+         
+         <div class="ui stackable two column grid aliceblueclass" >
+                    <div class="column  five wide fields">
+                             {{> shortMenuStaff}} 
+                   </div>
+                    <div class="column">
+
+                         {{!-- {{This DIV holds the patient notications }} --}}
+                        <div id="staff-notification-menu-option-id" class="row staff-menu-option-class showHideAdministrative2" style="display:none">
+                                {{> notification}}   
+                        </div> 
+
+                        <div id="staff-teams-menu-option-id" class="row staff-menu-option-class showHideAdministrative2" style="display:none">
+                                {{> staffTeams}}   
+                        </div> 
+
+                       {{!-- {{This DIV holdsthe information of the patient }} --}}
+                        <div id="staff-info-menu-option-id" class="row staff-menu-option-class cornflowerblueclass" style="display: block">
+                                {{> staffPersonalInfo }}   
+                        </div> 
+                        <div id="change-password-menu-option-id" class="row staff-menu-option-class showHideAdministrative2" style="display:none">
+                             {{> changePassword}}   
+                        </div> 
+                    </div>
+    </div>
+            
+        <div>   {{> footer home="active"}} </div>
+        </div>  
+    </body>
+</html>

@@ -1,0 +1,35 @@
+ <div class="ui segment" id="sm-main-div-id">
+      <div class="ui relaxed divided list">
+
+       <div onclick="showdHideAdministrative('administrative-create')" >  
+            <a class="ui blue tag label  item sm-options">Criar</a></div> 
+      
+             <div id="administrative-create" class="administrative-show-hide">
+                       <a class="ui teal ribbon  label item " id="sm-sub-options1" onclick="createPatientMenu()">Criar Utente </a> 
+                </br>  <a class="ui teal ribbon  label item " id="sm-sub-options2" onclick="createStaffMemberMenu()" >Criar Médico ou Enfermeiro</a>
+                </br>  <a class="ui teal ribbon  label item " id="sm-sub-options3" onclick="createTeamMenu()">Criar Equipa</a>
+             </div></br>    
+   
+      
+       <div onclick="showdHideAdministrative('administrative-get')" > 
+            <a class="ui  blue tag label item sm-options" >Consultar </a></div> 
+     
+             <div  id="administrative-get" class="administrative-show-hide">
+                 <a class="ui teal ribbon  label item " id="sm-sub-options4" href="{{postTeamURL}}">Consultar Equipas </a> 
+                </br>  <a class="ui teal ribbon  label item " id="sm-sub-options5" href="{{postPatientURL}}">Consultar Utentes</a>
+                </br>  <a class="ui teal ribbon  label item " id="sm-sub-options6" href="{{DoctorsURL}}">Consultar Doutores</a>
+                </br>  <a class="ui teal ribbon  label item " id="sm-sub-options7" href="{{NursesURL}}">Consultar Enfermeiros</a>
+             </div> </br>  
+      
+       <div onclick="showdHideAdministrative('administrative-others')" >  
+           <a class="ui blue tag label item sm-options">Outras Opções</a></div> 
+       
+             <div  id="administrative-others" class="administrative-show-hide">
+                       <a class=" sm ui teal ribbon  label item " id="sm-sub-options8"  onclick="addPeople()"> Adicionar médico, enfermeiro e pacientes</a> 
+                </br>  <a class="ui teal ribbon  label item header " id="sm-sub-options9" onclick="getInfoMenu()"> Informações sobre a instituição</a>
+
+             </div>    
+      
+        
+    </div>                 
+ </div>

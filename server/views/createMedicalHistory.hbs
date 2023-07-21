@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    
+  </head>
+
+     <body bgcolor="#E6E6FA">
+    <div class="ui segment">
+      {{> shortLoggedMenu home="active"}}   
+    
+
+
+<div class="ui inverted ">
+
+      <form class="ui form  createmedicalhistory-class"  method="POST" action="{{postMedicalHistory}}">
+             <h4 class="ui dividing header">Historial Médico</h4>
+             <div class="field">
+                  <div class="inline fields">
+                         <div class="four wide field">
+                                <input type="text" name="height" placeholder="altura" required>
+                          </div>
+                        
+                          <div class="four wide field">
+                               <input type="text" name="weightHistory" placeholder="historial do peso" required>
+                          </div>
+                          <div class="four wide field">
+                                 <input type="text" name="weight" placeholder="peso" required>
+                          </div>
+                    </div>   
+                                
+            </div>
+            <div class="field">
+                    <label>Tipo de Sangue</label>
+                        <select class="ui dropdown" name="bloodType" required>        
+                                <option value="">...</option>
+                                <option value="A RhD positivo (A+)">A RhD positivo (A+)</option>
+                                <option value="A RhD negativo (A-) ">A RhD negativo (A-) </option>
+                                <option value="B RhD positivo (B+) ">B RhD positivo (B+) </option>
+                                <option value="B RhD negativo (B-) ">B RhD negativo (B-) </option> 
+                                <option value="O RhD positivo (O+) ">O RhD positivo (O+) </option>
+                                <option value="O RhD negativo (O-) ">O RhD negativo (O-) </option> 
+                                <option value="AB RhD positivo (AB+) ">AB RhD positivo </option>
+                                <option value="AB RhD negativo (AB-)  ">AB RhD negativo (AB-)  </option>       
+                        </select>
+            </div>
+            <div class="field">
+                <label>Antecedentes alérgicos</label>
+                    <select class="ui dropdown" name="allergies" required>        
+                            <option value="">...</option>
+                            <option value="Alergias">Alergias</option>
+                            <option value="Alergias a medicamentos">Alergias a medicamentos</option>
+                    </select>
+            </div>
+            <div class="field">
+                    <label>Doenças clínicas</label>
+                        <select class="ui dropdown" name="clinicalDiseases" required>        
+                                <option value="">...</option>
+                                <option value="Cardiopatias">Cardiopatias</option>
+                                <option value="Diabetes">Diabetes</option>
+                                <option value="Dislipidemia">Dislipidemia</option>   
+                                <option value="Doenças dermatológicas (outras)">Doenças dermatológicas (outras)</option>
+                                <option value="Doenças hepáticas">Doenças hepáticas</option>
+                                <option value="Doenças hormonais">Doenças hormonais</option>
+                                <option value="Doenças reumatológicas">Doenças reumatológicas</option>
+                                <option value="Doenças oncológicas">Doenças oncológicas</option>
+                                <option value="Doenças renais ">Doenças renais </option>
+                                <option value="HIV">HIV</option>
+                                <option value="Metabólicas">Metabólicas</option>      
+                        </select>
+            </div>
+            <div class="field">
+                    <label>Atopias</label>
+                                                            <select class="ui dropdown" name="atopias" required>        
+                                                                    <option value="">...</option>
+                                                                    <option value="Asma">Asma</option>
+                                                                    <option value="Dermatites ">Dermatites </option>
+                                                                    <option value="Rinite">Rinite</option>      
+                                                                </select>
+            </div>
+              
+           <div class="field">
+                <div class="field">
+                    <input type="checkbox" name="anorexia" value="Sim">Anorexia<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="surgeries" value="Sim">Cirurgias pregressas<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="comorbidities" value="Sim">Comorbidades<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="diseases" value="Sim">Doenças - hospitalização<br>
+                </div>
+                <div class="field">
+                    <input type="checkbox" name="sah" value="Sim">Hipertensão arterial sistémica <br>
+                </div>
+                 <div class="field">
+                    <input type="checkbox" name="vaccination" value="Sim">Vacinação <br>
+                </div>
+                 <div class="field">
+                    <input type="checkbox" name="thyroid" value="Sim">Tiroide <br>
+                </div>
+                 <div class="field">
+                    <input type="checkbox" name="transfusions" value="Sim">Transfusões <br>
+                </div>
+                
+            </div>
+        
+              <div class="field">
+                   <input id="submit-medicalhistory-id"class="ui inverted primary button" type="submit" name="submit-administrative" value="submit">
+               </div>  <br><br> <br>
+                
+        </form>
+           </div>      
+     
+    </div>
+    </body>
+</html>

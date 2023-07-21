@@ -1,0 +1,222 @@
+body{
+    background-color:"#E6E6FA";
+}
+
+.showHideAdministrative {
+    background-color: aliceblue;
+}
+.showHideAdministrative2{
+    color:cornflowerblue; 
+    display: none;
+}
+.showHideAdministrative3{
+    color:cornflowerblue; 
+    display: block;
+}
+
+#add-people-menu-option-id{
+    color:cornflowerblue; 
+    display: none;
+}
+
+#get-info-menu-option-id{
+    color:cornflowerblue;
+     display: block;
+}
+
+#short-footer-id{
+    display:none;
+}
+#short-header-id{
+    display:none;
+}
+.administrative-show-hide{
+  display:none; 
+  margin-left:60px;
+  margin-top: 8px;
+}
+
+#sm-main-div-id{
+    margin-bottom: 400px;
+}
+.sm-options{
+    font-size: 15px;
+}
+
+#sm-sub-options1{
+    margin-bottom: 4px;
+}
+#sm-sub-options2{
+    margin-bottom: 4px;
+}
+#sm-sub-options3{
+    margin-bottom: 4px;
+}
+#sm-sub-options4{
+    margin-bottom: 4px;
+}
+#sm-sub-options5{
+    margin-bottom: 4px;
+}
+#sm-sub-options6{
+    margin-bottom: 4px;
+}
+#sm-sub-options7{
+    margin-bottom: 4px;
+}
+#sm-sub-options8{
+    margin-bottom: 4px;
+}
+#sm-sub-options9{
+    margin-bottom: 4px;
+}
+.cornflowerblueclass{
+    color:cornflowerblue;
+} 
+.aliceblueclass{
+    color:aliceblue;
+} 
+.formscreate{
+    background-color: aliceblue;
+}
+.backtomenu{
+  padding:8%;
+  font-size: 15px;
+}
+.mainpagediv{
+height:600px;
+}
+.div400{
+    height:400px;
+    }
+.div600{
+        height:600px;
+        }    
+#err-id1{
+    position:absolute;
+    left:200px;
+    top:10px;
+}
+#err-id2{
+    font-size:13em;
+    color:blue;
+    font-weight:bold;
+}
+
+#err-id3{
+    font-size:1em;
+    color:mediumblue
+}
+
+.menustaff{
+    background-color: dodgerblue;
+    color:white;
+     height: 600px;
+}
+
+#sm-patient-options1{
+    margin-bottom: 4px;
+}
+#sm-patient-options2{
+    margin-bottom: 4px;
+}
+#sm-patient-options3{
+    margin-bottom: 4px;
+}
+#sm-patient-options4{
+    margin-bottom: 4px;
+}
+#sm-patient-options5{
+    margin-bottom: 4px;
+    margin-top: 5px;
+}
+#sm-patient-options6{
+    margin-bottom: 4px;
+}
+#sm-patient-options7{
+    margin-bottom: 4px;
+}
+#sm-patient-options8{
+    margin-bottom: 4px;
+}
+#sm-staff-options1{
+    margin-bottom: 4px;
+    margin-top: 4px;
+    margin-left: 30px;
+}
+#sm-staff-options2{
+    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+#sm-staff-options3{
+    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+#sm-staff-options4{
+    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+
+#sm-staff-options5{
+    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+
+#sm-staff-options6{
+    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+
+#sm-staff-options7{
+    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+#sm-staff-options8{
+
+    margin-left: 40px;
+}
+
+.patient-show-hide{
+    display:none; 
+    margin-left:60px;
+    margin-top: 8px;
+  }
+#sm-patient-wellcome{
+    font-size: 16px;
+  }
+.fitInCenter{
+    position:absolute;
+    left:400px;
+    top:60px;
+    height:180px;
+    overflow: auto;
+  }
+  .fitInCenter2{
+    position:absolute;
+    left:220px;
+    top:280px;
+  }
+#sm-mr-options1{
+    margin-bottom: 8px;
+}
+#sm-mr-options2{
+    margin-bottom: 8px;
+}
+#sm-mr-options3{
+    margin-bottom: 8px;
+}
+#sm-mrL-options1{
+    margin-bottom: 8px;
+}
+#sm-mrL-options2{
+    margin-bottom: 8px;
+}

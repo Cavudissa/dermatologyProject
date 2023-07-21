@@ -1,0 +1,118 @@
+{
+  "name": "MedicalRecordGroup",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Pathology": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "Status": {
+      "type": "boolean",
+      "default": true
+    },
+    "MainComplaint": {
+      "type": "string",
+      "required": true
+    },
+    "StartedWhen": {
+      "type": "string",
+      "required": true
+    },
+    "StartedLocation": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "string",
+      "required": true
+    },
+    "Intensity": {
+      "type": "string",
+      "required": true
+    },
+    "Constancy": {
+      "type": "string",
+      "required": true
+    },
+    "Dispersal": {
+      "type": "string",
+      "required": true
+    },
+    "InjuryChanges": {
+      "type": "string",
+      "required": true
+    },
+    "InjuryEvolution": {
+      "type": "string",
+      "required": true
+    },
+    "Trigger": {
+      "type": "string",
+      "required": true
+    },
+    "PreviousTreatment": {
+      "type": "string",
+      "required": true
+    },
+    "Others": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "medicalRecords": {
+      "type": "hasMany",
+      "model": "MedicalRecord",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "detailedMedicalRecord": {
+      "type": "hasMany",
+      "model": "DetailedMedicalRecord",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

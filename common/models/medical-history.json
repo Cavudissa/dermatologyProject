@@ -1,0 +1,97 @@
+{
+  "name": "MedicalHistory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Height": {
+      "type": "string",
+      "required": true
+    },
+    "WeightHistory": {
+      "type": "string",
+      "required": true
+    },
+    "Weight": {
+      "type": "string",
+      "required": true
+    },
+    "BMI": {
+      "type": "string",
+      "required": true
+    },
+    "BloodType": {
+      "type": "string",
+      "required": true
+    },
+    "Anorexia": {
+      "type": "string",
+      "required": true
+    },
+    "AllergicAntecedents": {
+      "type": "string",
+      "required": true
+    },
+    "Atopias": {
+      "type": "string",
+      "required": true
+    },
+    "PreviousSurgeries": {
+      "type": "string",
+      "required": true
+    },
+    "Comorbidities": {
+      "type": "string",
+      "required": true
+    },
+    "Diseases": {
+      "type": "string",
+      "required": true
+    },
+    "ClinicalDiseases": {
+      "type": "string",
+      "required": true
+    },
+    "SAH": {
+      "type": "string",
+      "required": true
+    },
+    "Vaccination": {
+      "type": "string",
+      "required": true
+    },
+    "Thyroid": {
+      "type": "string",
+      "required": true
+    },
+    "Transfusions": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

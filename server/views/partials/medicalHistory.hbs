@@ -1,0 +1,27 @@
+<div class="ui info message">
+  {{#if this.medical}}
+    <h4>Histórico Médico</h4>
+    <i class="clipboard list icon"></i>
+    <ul class="list">
+      <li>Altura: {{this.medical.Height}}</li>
+      <li>Historial de Peso: {{this.medical.WeightHistory}}</li>
+      <li>Peso Atual: {{this.medical.Weight}}</li>
+      <li>BMI: {{this.medical.BMI}}</li>
+      <li>Obesidade: {{this.medical.Obesity}}</li>
+      <li>Tipo de Sangue: {{this.medical.BloodType}}</li>
+      <li>Anorexia: {{this.medical.Anorexia}}</li>
+      <li>Antecedentes alérgicos: {{this.medical.AllergicAntecedents}}</li>
+      <li>Atopias: {{this.medical.Atopias}}</li>
+      <li>Cirurgias pregressas: {{this.medical.PreviousSurgeries}}</li>
+      <li>Comorbidades: {{this.medical.Comorbidities}}</li>
+      <li>Doenças - hospitalização: {{this.medical.Diseases}}</li>
+      <li>Doenças clínicas: {{this.medical.ClinicalDiseases}}</li>
+      <li>Hipertensão arterial sistémica: {{this.medical.SAH}}</li>
+      <li>Vacinação: {{this.medical.Vaccination}}</li>
+      <li>Tiroide: {{this.medical.Thyroid}}</li>
+      <li>Transfusões: {{this.medical.Transfusions}}</li>
+    </ul>
+  {{else if this.role}}
+    <a href="{{this.postmedicalHistory}}">Adicionar um Histórico Médico</a>
+  {{/if}}
+</div>

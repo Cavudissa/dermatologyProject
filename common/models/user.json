@@ -1,0 +1,29 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "doctor": {
+      "type": "hasOne",
+      "model": "Doctor",
+      "foreignKey": ""
+    },
+    "nurse": {
+      "type": "hasOne",
+      "model": "Nurse",
+      "foreignKey": ""
+    },
+    "patient": {
+      "type": "hasOne",
+      "model": "Patient",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
